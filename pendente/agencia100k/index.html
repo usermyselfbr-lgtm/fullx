@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<!--
+══════════════════════════════════════════════════════════════════════════════
+  FULLX — AULA AO VIVO · VARIANTE B (promessa) · teste A/B (16/10/2026)
+
+  A (index.html)  = ângulo de MECANISMO: "seu problema não é conhecimento, é instalação"
+  B (este arquivo) = ângulo de PROMESSA: "feche cliente todo mês sem depender de indicação",
+                     com a prova colada na promessa. Visual escuro, coluna central, ingresso 3D, contagem regressiva.
+  Mesmo formulário, mesma pontuação, mesmo rastreio. Cada lead e evento leva variante='B'.
+
+      ✏️ EDITE AQUI → texto   🖼️ MÍDIA → foto/print   🔗 LINK → links
+      📊 RASTREIO → Pixel / GTM   ⚙️ CONFIG → webhook, WhatsApp, grupo
+
+  REGRAS DE OURO
+    • Troque só o texto ENTRE os sinais < >. Nunca apague < > nem aspas.
+    • Tudo entre colchetes [ASSIM] é dado que SÓ VOCÊ tem. Troque antes de publicar.
+    • Bloco com data-draft fica OCULTO no ar até você preencher e apagar a palavra data-draft.
+    • A contagem regressiva lê a data em data-alvo (abaixo). Se mudar a data da live, mude lá.
+══════════════════════════════════════════════════════════════════════════════
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- [1] 📊 GOOGLE TAG MANAGER. DESLIGADO. Troque GTM-XXXXXXX e apague a 1ª e a última linha do bloco. -->
+<!-- GTM-INICIO · apague esta linha inteira para ligar
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+GTM-FIM · apague esta linha inteira para ligar -->
+
+<!-- [2] 📊 PIXEL DA META. LIGADO (pixel 1127997753074983). -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1127997753074983');
+fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1127997753074983&ev=PageView&noscript=1" alt=""></noscript>
+
+<!-- [3] ✏️ SEO -->
+<title>FULLX — Feche cliente todo mês sem depender de indicação · Aula ao vivo 25/10</title>
+<meta name="description" content="Aula ao vivo e gratuita no Google Meet, domingo 25/10 às 14h: os 4 funis que levaram a primeira agência a R$100 mil em 90 dias. Para donos de agência e gestores de tráfego.">
+<meta property="og:title" content="Feche cliente todo mês sem depender de indicação">
+<meta property="og:description" content="Domingo, 25/10, às 14h. Os 4 funis que levaram a primeira agência a R$100 mil em 90 dias. Grátis, no Google Meet.">
+<meta property="og:type" content="website">
+<!-- 🖼️ MÍDIA: imagem 1200x630 da prévia no WhatsApp -->
+<meta property="og:image" content="">
+<meta name="theme-color" content="#050608">
+<!-- 🔗 LINK: domínio final da variante B -->
+<link rel="canonical" href="https://fullx.com.br/aula-b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&family=Geist:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* [4] 🎨 TOKENS — variante B: noite profunda + gelo */
+:root{
+  --bg:#050608;--bg-2:#0b0d12;--bg-3:#11141b;
+  --tx:#eef2f8;--tx-2:#a7b1c2;--tx-3:#7d879a;
+  --line:#ffffff12;--line-2:#ffffff22;
+  --ice:#c1d5ec;--ice-2:#e6f0fc;
+  --accent:#9ec0f5;
+  --title:linear-gradient(180deg,#ffffff 15%,#dbe6f5 60%,#9fb2cf 100%);
+  --btn:linear-gradient(180deg,#ffffff 0%,#e6eef9 55%,#c7d6ea 100%);
+  --display:"Sora","Geist",system-ui,sans-serif;
+  --sans:"Geist",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --w:1080px;--r-s:12px;--r:18px;--r-l:28px;
+  --expo:cubic-bezier(.16,1,.3,1);--ease:cubic-bezier(.4,0,.2,1);
+  /* variáveis usadas pelo formulário (janela clara) */
+  --white:#ffffff;--paper:#f7f8fa;--mist:#eef1f5;
+}
+
+/* [5] BASE */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg);overflow-x:clip}
+body{font-family:var(--sans);background:transparent;color:var(--tx-2);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+img,svg{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--w);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75px;stroke-linecap:round;stroke-linejoin:round;width:1em;height:1em;flex:none}
+strong{color:var(--tx);font-weight:500}
+
+/* TIPOGRAFIA */
+h1,h2,h3,blockquote,.big{font-family:var(--display);font-weight:400;text-wrap:balance;padding-bottom:.08em;
+  background:var(--title);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+h1{font-size:clamp(2.5rem,1.3rem + 5vw,5rem);line-height:1;letter-spacing:-.05em;font-weight:400}
+h2{font-size:clamp(1.9rem,1.25rem + 2.7vw,3.3rem);line-height:1.05;letter-spacing:-.045em}
+h3{font-size:clamp(1.1rem,1.05rem + .3vw,1.25rem);line-height:1.3;letter-spacing:-.02em;font-weight:500}
+@media(forced-colors:active){h1,h2,h3,blockquote,.big{color:CanvasText;background:none}}
+p{text-wrap:pretty}
+.lead{font-size:clamp(1.08rem,1rem + .45vw,1.28rem);line-height:1.6;color:var(--tx-2);max-width:54ch}
+.small{font-size:.9rem;color:var(--tx-3)}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* BOTÕES — gelo cromado com halo pulsando e reflexo */
+.btn{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 32px;border-radius:var(--r-s);border:0;cursor:pointer;font-family:var(--sans);font-size:1.04rem;font-weight:500;white-space:nowrap;text-align:center;transition:transform .15s var(--ease),filter .2s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn .ic{display:none}
+.btn-primary{color:#050608;
+  background:linear-gradient(110deg,#ffffff00 38%,#ffffffcc 50%,#ffffff00 62%) -150% 0/250% 100% no-repeat,var(--btn);
+  box-shadow:inset 0 -1px 0 #0506081f,0 0 0 1px #ffffffcc,0 18px 40px -18px #9ec0f5aa;
+  animation:respira 2.6s var(--ease) infinite,reflexo 3.4s ease-in-out 1s infinite}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-primary[disabled]{opacity:.6;cursor:progress}
+.btn{--glow:#9ec0f5;--ring:#c1d5ec}
+.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;
+  box-shadow:0 0 0 2px var(--ring),0 0 18px 4px var(--glow),0 0 44px 12px color-mix(in srgb,var(--glow) 40%,transparent);opacity:0;animation:anel 2.6s var(--ease) infinite}
+.btn::before{content:"";position:absolute;inset:6px 10%;border-radius:inherit;z-index:-2;pointer-events:none;background:var(--glow);filter:blur(20px);opacity:.4;animation:aura 2.6s var(--ease) infinite}
+@keyframes anel{0%{transform:scale(1);opacity:.7}70%,100%{transform:scale(1.05,1.3);opacity:0}}
+@keyframes aura{0%,100%{opacity:.25;transform:translateY(6px) scale(.92)}50%{opacity:.6;transform:translateY(8px) scale(1.04)}}
+@keyframes respira{0%,100%{scale:1}50%{scale:1.025}}
+@keyframes reflexo{0%{background-position:-150% 0,0 0}55%,100%{background-position:250% 0,0 0}}
+.btn-ghost{background:var(--white);color:#0c0f15;min-height:48px;padding:0 16px;border-radius:var(--r-s);border:0;box-shadow:inset 0 0 0 1px #0c0f1522;cursor:pointer;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost .ic{transform:rotate(180deg);width:16px;height:16px}
+.btn-wa{--glow:#22c55e;--ring:#15803d;color:#fff;background:linear-gradient(110deg,#ffffff00 38%,#ffffff40 50%,#ffffff00 62%) -150% 0/250% 100% no-repeat,#15803d;animation:respira 2.6s var(--ease) infinite,reflexo 3.4s ease-in-out 1s infinite}
+.btn-wa .ic{display:inline-block;width:18px;height:18px;margin-right:8px}
+.btn[disabled]::after,.btn[disabled]::before{display:none}
+@media(max-width:639px){.btn-m{width:100%}}
+/* no formulário (janela clara) o botão principal volta ao preto */
+dialog .btn-primary{color:#fff;background:linear-gradient(180deg,#3a4254 0%,#171c26 52%,#0c0f15 100%);box-shadow:inset 0 1px 0 #ffffff3d,0 0 0 1px #0c0f15,0 14px 30px -16px #1c2a44cc}
+dialog .btn{--glow:#4f7fd0;--ring:#2f5fae}
+#next,#next::before,#next::after{animation:none!important}#next::before,#next::after{display:none}
+#done-wa:not([data-solo]),#done-wa:not([data-solo])::before,#done-wa:not([data-solo])::after{animation:none!important}
+#done-wa:not([data-solo])::before,#done-wa:not([data-solo])::after{display:none}
+
+/* revelar ao rolar */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--expo),transform .9s var(--expo)}
+.js .reveal.on{opacity:1;transform:none}
+
+/* rascunho */
+html:not(.draft) [data-draft]{display:none!important}
+.draft-bar{display:none;background:#fff3c4;color:#4a3800;font-size:.78rem;padding:8px 16px;text-align:center}
+html.draft .draft-bar{display:block}
+.todo{background:#fff3c4;color:#4a3800;border-radius:4px;padding:0 5px;font-weight:500}
+html.draft [data-draft]{outline:2px dashed #e7c24a;outline-offset:4px}
+
+/* seções */
+.sec{padding:clamp(96px,12vw,150px) 0;position:relative}
+.head{max-width:780px;margin:0 auto clamp(44px,6vw,72px);text-align:center}
+.head .lead{margin:20px auto 0}
+
+/* ═══ FUNDO: aurora + feixes cruzados em X (código da marca) + grão ═══ */
+.fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.fx .au{position:absolute;border-radius:50%;filter:blur(80px);will-change:transform}
+.fx .a1{width:min(900px,130vw);aspect-ratio:1;left:50%;top:-45%;margin-left:min(-450px,-65vw);background:radial-gradient(circle,#2f5fae66 0%,#2f5fae00 65%);animation:au1 20s ease-in-out infinite alternate}
+.fx .a2{width:min(620px,100vw);aspect-ratio:1;right:-20%;top:30%;background:radial-gradient(circle,#7c8da84d 0%,#7c8da800 65%);animation:au2 26s ease-in-out infinite alternate}
+.fx .a3{width:min(560px,90vw);aspect-ratio:1;left:-18%;bottom:-25%;background:radial-gradient(circle,#c1d5ec2e 0%,#c1d5ec00 65%);animation:au3 30s ease-in-out infinite alternate}
+@keyframes au1{to{transform:translate(8%,10%) scale(1.15)}}
+@keyframes au2{to{transform:translate(-25%,-12%) scale(.9)}}
+@keyframes au3{to{transform:translate(20%,-15%) scale(1.1)}}
+.fx .x{position:absolute;left:50%;top:-10vh;width:180vw;height:1px;margin-left:-90vw;background:linear-gradient(90deg,transparent,#c1d5ec55 40%,#ffffffaa 50%,#c1d5ec55 60%,transparent);filter:blur(.4px);opacity:.5}
+.fx .x1{transform:translateY(46vh) rotate(-30deg)}
+.fx .x2{transform:translateY(46vh) rotate(24deg)}
+.fx::after{content:"";position:absolute;inset:0;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@media(max-width:700px){.fx .au{filter:blur(56px);animation:none}.fx .a3{display:none}}
+
+/* ═══ [6] TOPO + CONTAGEM ═══ */
+.bar{position:sticky;top:0;z-index:50;background:#050608e6;border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:inline-flex;align-items:center}
+.brand .logo{width:110px;height:28px}
+.count{display:flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums}
+.count .lbl{font-size:.82rem;color:var(--tx-3);margin-right:4px}
+.count span:not(.lbl){display:grid;justify-items:center;min-width:40px;padding:4px 6px;border-radius:8px;background:var(--bg-3);box-shadow:inset 0 0 0 1px var(--line)}
+.count b{font-family:var(--display);font-weight:400;font-size:1.05rem;color:var(--tx);line-height:1.1}
+.count small{font-size:.62rem;color:var(--tx-3);line-height:1}
+@media(max-width:520px){.count .lbl{display:none}.count span:not(.lbl){min-width:34px}}
+
+.hero{padding:clamp(56px,9vw,104px) 0 clamp(72px,10vw,120px);text-align:center}
+.date{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;color:var(--tx);padding:8px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2);background:#ffffff08}
+.date i{width:8px;height:8px;border-radius:50%;background:var(--accent);position:relative}
+.date i::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);animation:ping 2.4s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.6}to{transform:scale(3);opacity:0}}
+.hero h1{margin:28px auto 0;max-width:15ch}
+.hero .lead{margin:26px auto 0}
+.proof-chip{display:inline-flex;align-items:center;gap:12px;margin-top:28px;padding:8px 18px 8px 8px;border-radius:999px;background:#ffffff08;box-shadow:inset 0 0 0 1px var(--line);text-align:left;font-size:.9rem;line-height:1.35}
+.proof-chip img{width:40px;height:40px;border-radius:50%;object-fit:cover;filter:grayscale(1);background:var(--bg-3)}
+.hero-cta{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:14px}
+
+/* INGRESSO 3D (elemento memorável) */
+.pass-wrap{perspective:1200px;margin:clamp(56px,8vw,88px) auto 0;max-width:560px}
+.pass{position:relative;display:grid;grid-template-columns:1fr auto;border-radius:var(--r-l);text-align:left;
+  background:linear-gradient(135deg,#1a202b 0%,#0d1016 60%,#141924 100%);
+  box-shadow:inset 0 0 0 1px #ffffff1c,inset 0 1px 0 #ffffff26,0 40px 80px -30px #000,0 80px 140px -60px #2f5fae80;
+  transform:rotateX(14deg) rotateZ(-3deg);animation:passe 8s ease-in-out infinite;
+  -webkit-mask:radial-gradient(circle 14px at calc(100% - 132px) 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 14px at calc(100% - 132px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle 14px at calc(100% - 132px) 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 14px at calc(100% - 132px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+@keyframes passe{0%,100%{transform:rotateX(14deg) rotateZ(-3deg) translateY(0)}50%{transform:rotateX(8deg) rotateZ(-1deg) translateY(-12px)}}
+.pass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 30%,#ffffff1a 45%,transparent 60%);background-size:250% 100%;animation:reflexo2 6s ease-in-out infinite}
+@keyframes reflexo2{0%{background-position:150% 0}60%,100%{background-position:-60% 0}}
+.pass-main{padding:24px 22px}
+.pass-main .t{font-family:var(--display);font-size:1.3rem;letter-spacing:-.03em;color:var(--tx)}
+.pass dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin-top:16px;font-size:.92rem}
+.pass dt{color:var(--tx-3)}
+.pass dd{color:var(--tx)}
+.pass-stub{width:132px;border-left:2px dashed #ffffff26;display:grid;place-items:center;align-content:center;gap:4px;padding:16px;text-align:center}
+.pass-stub .big{font-size:2.6rem;letter-spacing:-.06em;line-height:1}
+.pass-stub s{font-size:.8rem;color:var(--tx-3)}
+@media(max-width:480px){.pass{grid-template-columns:1fr;transform:rotateX(10deg) rotateZ(-2deg);-webkit-mask:none;mask:none}.pass-stub{width:auto;border-left:0;border-top:2px dashed #ffffff26;grid-auto-flow:column;gap:12px}}
+
+/* ═══ [7] O QUE MUDA ═══ */
+.outs{display:grid;gap:16px}
+@media(min-width:860px){.outs{grid-template-columns:repeat(3,1fr);gap:20px}}
+.out{position:relative;border-radius:var(--r-l);padding:30px 24px 28px;background:linear-gradient(180deg,#11141b,#0a0c11);box-shadow:inset 0 0 0 1px var(--line),0 30px 60px -30px #000;animation:flutua 7s ease-in-out infinite}
+.out:nth-child(2){animation-delay:-2.3s}.out:nth-child(3){animation-delay:-4.6s}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.out .from{font-size:.92rem;color:var(--tx-3);text-decoration:line-through;text-decoration-color:#ffffff33}
+.out h3{margin:10px 0 12px;font-size:1.35rem;font-weight:400;letter-spacing:-.03em}
+.out p{font-size:.98rem}
+.out .how{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:.92rem;color:var(--tx)}
+
+/* ═══ [8] LINHA DO TEMPO DA PROVA ═══ */
+.time{position:relative;max-width:760px;margin:0 auto;list-style:none}
+.time::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--line-2),var(--accent),var(--line-2))}
+.time li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:20px;padding:0 0 44px}
+.time li:last-child{padding-bottom:0}
+.time .pt{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line-2),0 0 24px -4px #9ec0f566;position:relative;z-index:1}
+.time .pt::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.time .k{font-size:.88rem;color:var(--tx-3)}
+.time .big{font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem);letter-spacing:-.045em;line-height:1.05;margin-top:4px;display:block}
+.time p{margin-top:8px;max-width:48ch}
+
+/* ═══ [9] AULA ═══ */
+.agenda{max-width:820px;margin:0 auto;list-style:none;counter-reset:a}
+.agenda li{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.agenda li:last-child{border-bottom:1px solid var(--line)}
+.agenda .n{font-family:var(--display);font-size:2rem;font-weight:300;letter-spacing:-.05em;line-height:1;background:var(--title);-webkit-background-clip:text;background-clip:text;color:transparent}
+.agenda h3{font-size:1.25rem;font-weight:400;letter-spacing:-.025em}
+.agenda p{margin-top:6px;font-size:.98rem}
+
+/* ═══ [10] JULIO + DEPOIMENTO ═══ */
+.host{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.host{grid-template-columns:5fr 7fr;gap:72px}}
+.host figure{border-radius:var(--r-l);overflow:hidden;background:var(--bg-3);box-shadow:0 0 0 1px var(--line),0 40px 80px -30px #000,0 60px 120px -40px #2f5fae55;max-width:420px;animation:flutua 8s ease-in-out infinite}
+.host figure img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+@media(max-width:899px){.host figure{max-width:300px}}
+.host h2{margin-bottom:22px}
+.host p+p{margin-top:14px}
+.quote{margin-top:44px;padding:30px 26px;border-radius:var(--r-l);background:#ffffff06;box-shadow:inset 0 0 0 1px var(--line)}
+.quote blockquote{font-size:clamp(1.4rem,1.15rem + 1.2vw,2rem);line-height:1.18;letter-spacing:-.035em}
+.quote cite{display:block;margin-top:16px;font-style:normal;font-size:.9rem;color:var(--tx-3)}
+.shot{margin-top:20px;border-radius:var(--r);aspect-ratio:9/16;max-width:220px;background:var(--bg-3);display:grid;place-items:center;padding:16px;text-align:center}
+
+/* ═══ [11] FILTRO ═══ */
+.fit{display:grid;gap:16px;max-width:900px;margin:0 auto}
+@media(min-width:800px){.fit{grid-template-columns:1fr 1fr;gap:20px}}
+.fit>div{border-radius:var(--r-l);padding:30px 26px;background:#ffffff06;box-shadow:inset 0 0 0 1px var(--line)}
+.fit .yes{background:linear-gradient(180deg,#141924,#0b0e14);box-shadow:inset 0 0 0 1px var(--line-2),0 30px 60px -30px #000}
+.fit ul{list-style:none;margin-top:12px}
+.fit li{padding:13px 0;border-top:1px solid var(--line);font-size:1rem}
+.fit .yes li{color:var(--tx)}
+
+/* ═══ [12] OFERTA ═══ */
+.offer{max-width:720px;margin:0 auto;border-radius:var(--r-l);padding:clamp(32px,5vw,52px) clamp(24px,5vw,52px);text-align:center;
+  background:radial-gradient(120% 80% at 50% 0%,#2f5fae33,transparent 60%),linear-gradient(180deg,#121722,#090b10);
+  box-shadow:inset 0 0 0 1px var(--line-2),inset 0 1px 0 #ffffff1f,0 50px 100px -40px #000,0 80px 160px -60px #2f5fae66;animation:flutua 8s ease-in-out infinite}
+.offer .was{font-size:.95rem;color:var(--tx-3)}
+.offer .was s{color:var(--tx-2)}
+.offer .big{display:block;font-size:clamp(4.2rem,3rem + 5vw,6.5rem);font-weight:300;letter-spacing:-.07em;line-height:.95;margin:10px 0 6px}
+.offer ul{list-style:none;text-align:left;max-width:440px;margin:28px auto 0}
+.offer li{padding:12px 0;border-top:1px solid var(--line);font-size:.98rem;color:var(--tx)}
+.offer .btn{margin-top:28px;width:100%;max-width:440px}
+.offer .seats{margin-top:18px;font-size:.92rem}
+.pledge{max-width:720px;margin:20px auto 0;text-align:center;padding:28px 24px;border-radius:var(--r-l);box-shadow:inset 0 0 0 1px var(--line)}
+.pledge h3{font-weight:400;font-size:clamp(1.25rem,1.1rem + .8vw,1.7rem);letter-spacing:-.03em;line-height:1.2}
+.pledge p{margin-top:10px}
+
+/* ═══ [13] FAQ ═══ */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:70px;padding:18px 0;cursor:pointer;color:var(--tx);font-weight:500;font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{width:18px;height:18px;flex:none;transition:transform .25s var(--ease);color:var(--tx-3)}
+.faq details[open] summary .ic{transform:rotate(45deg)}
+.faq details p{padding:0 0 24px;max-width:62ch}
+
+/* ═══ [14] FECHAMENTO ═══ */
+.compare{display:grid;gap:16px;max-width:900px;margin:0 auto clamp(48px,6vw,64px)}
+@media(min-width:800px){.compare{grid-template-columns:1fr 1fr;gap:20px}}
+.compare>div{border-radius:var(--r-l);padding:30px 26px}
+.compare .without{background:#ffffff05;box-shadow:inset 0 0 0 1px var(--line)}
+.compare .with{background:linear-gradient(180deg,#e6f0fc,#c1d5ec);color:#0c0f15;box-shadow:0 40px 80px -40px #9ec0f566;animation:flutua 7s ease-in-out infinite}
+.compare .with h3{background:none;color:#0c0f15}
+.compare ul{list-style:none;margin-top:12px}
+.compare li{padding:12px 0;border-top:1px solid var(--line);font-size:1rem}
+.compare .with li{border-top-color:#0c0f151a}
+.final{display:flex;flex-direction:column;align-items:center;gap:14px}
+
+.foot{padding:36px 0 40px;font-size:.86rem;color:var(--tx-3);border-top:1px solid var(--line)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.foot a{display:inline-flex;align-items:center;min-height:44px;color:var(--tx)}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#050608f0;border-top:1px solid var(--line-2);transform:translateY(110%);transition:transform .35s var(--expo);overflow:clip}
+.mbar.show{transform:none}
+.mbar .btn{width:100%}
+.mbar .btn::after{box-shadow:0 0 0 2px var(--ring),0 0 10px 2px var(--glow)}
+@media(min-width:900px){.mbar{display:none}}
+@media(max-width:899px){body{padding-bottom:88px}}
+
+/* ═══ TÍTULOS: palavras entrando + reflexo (mesmo script da variante A) ═══ */
+.fx-title{perspective:600px}
+.fx-title,.fx-title>span:not(.w){background:none!important;-webkit-text-fill-color:initial}
+.fx-title .w{display:inline-block;white-space:pre;-webkit-text-fill-color:transparent;
+  background:linear-gradient(105deg,#ffffff00 40%,#ffffff 50%,#ffffff00 60%) 0 0/260% 100% no-repeat,var(--title);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;transform:translateY(.45em) rotateX(-40deg);filter:blur(10px);transform-origin:50% 100%;
+  transition:opacity .9s var(--expo),transform 1s var(--expo),filter .9s var(--expo);transition-delay:calc(var(--i) * 55ms)}
+.fx-title.in .w{opacity:1;transform:none;filter:blur(0);animation:brilho 5.5s ease-in-out calc(1.2s + var(--i) * 55ms) infinite}
+@keyframes brilho{0%{background-position:160% 0,0 0}45%,100%{background-position:-60% 0,0 0}}
+@media(max-width:700px){.fx-title.in .w{animation-iteration-count:2}}
+
+/* [14] FORMULÁRIO */
+dialog{border:0;padding:0;margin:auto;width:min(540px,calc(100% - 24px));max-height:calc(100dvh - 24px);border-radius:var(--r-l);background:var(--white);color:var(--tx-2);box-shadow:0 0 0 1px var(--line),0 40px 80px -30px #0c0f1599;overflow:auto}
+dialog::backdrop{background:#0c0f15b3}
+.dlg-top{position:sticky;top:0;z-index:2;background:var(--white);padding:18px 20px 0;border-bottom:1px solid var(--line)}
+.dlg-row{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--tx);font-weight:500}
+.close{width:44px;height:44px;border-radius:var(--r-s);border:0;background:var(--white);box-shadow:inset 0 0 0 1px var(--line-2);display:grid;place-items:center;cursor:pointer;color:var(--tx)}
+.close .ic{width:18px;height:18px}
+.prog{margin-top:14px;height:3px;border-radius:3px;background:var(--mist);overflow:hidden}
+.prog i{display:block;height:100%;background:var(--accent);transform-origin:left;transform:scaleX(var(--p,.14));transition:transform .4s var(--expo)}
+.prog-t{display:block;margin:8px 0 10px;font-size:.8rem;color:var(--tx-3);font-variant-numeric:tabular-nums}
+form{padding:8px 20px 24px}
+@media(min-width:560px){.dlg-top{padding:20px 28px 0}form{padding:8px 28px 28px}}
+fieldset{border:0;min-width:0}
+legend{font-size:clamp(1.45rem,1.25rem + .7vw,1.75rem);letter-spacing:-.035em;line-height:1.15;margin:18px 0 6px;padding:0}
+.hint{font-size:.94rem;color:var(--tx-3);margin-bottom:18px}
+.opts{display:grid;gap:8px}
+.opt{position:relative;display:flex;align-items:center;gap:12px;min-height:54px;padding:12px 16px;border-radius:var(--r-s);cursor:pointer;background:var(--white);box-shadow:inset 0 0 0 1px var(--line-2);color:var(--tx);font-size:.98rem;transition:box-shadow .15s var(--ease),background .15s var(--ease)}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt::before{content:"";width:18px;height:18px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1.5px var(--tx-3)}
+.opt:hover{background:var(--paper)}
+.opt:has(input:checked){box-shadow:inset 0 0 0 2px var(--accent);background:#f3f7fd}
+.opt:has(input:checked)::before{box-shadow:inset 0 0 0 5px var(--accent)}
+.opt:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label{font-size:.9rem;font-weight:500;color:var(--tx)}
+.fld input,.fld textarea{width:100%;padding:0 14px;border-radius:var(--r-s);border:0;box-shadow:inset 0 0 0 1px var(--line-2);font:inherit;font-size:1rem;color:var(--tx);background:var(--white)}
+.fld input{min-height:54px}
+.fld textarea{min-height:128px;padding:12px 14px;line-height:1.45;resize:vertical}
+.fld input::placeholder,.fld textarea::placeholder{color:#8a93a3}
+.fld input:focus,.fld textarea:focus{outline:none;box-shadow:inset 0 0 0 1px var(--accent),0 0 0 3px #2f5fae26}
+.fld input[aria-invalid="true"],.fld textarea[aria-invalid="true"]{box-shadow:inset 0 0 0 1px #b42318}
+.muted{color:var(--tx-3)}
+.err{font-size:.86rem;color:#b42318;min-height:1.2em}
+.nav-f{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
+.nav-f .btn{min-height:52px;padding:0 24px;font-size:.98rem}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.privacy{display:flex;gap:8px;align-items:flex-start;margin-top:16px;font-size:.82rem;color:var(--tx-3);line-height:1.4}
+.privacy .ic{width:15px;height:15px;margin-top:2px}
+.done{text-align:center;padding:28px 6px 8px}
+.done .ok{width:60px;height:60px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;color:#fff;background:var(--btn)}
+.done .ok .ic{width:26px;height:26px;stroke-width:2.2px}
+.done h2{font-size:clamp(1.7rem,1.4rem + 1vw,2.1rem)}
+.done p{margin:12px auto 22px;max-width:40ch}
+.done .btn{width:100%;white-space:normal;padding:12px 20px;line-height:1.3}
+
+
+/* ═══ [FX] FUNDO 3D COM BRILHO (fixo atrás da página) ═══ */
+body{background:transparent}
+.fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.fx .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;will-change:transform}
+.fx .o1{width:min(780px,110vw);aspect-ratio:1;left:-18%;top:-22%;background:radial-gradient(circle,#c4d6f0 0%,#c4d6f000 65%);animation:orb1 22s ease-in-out infinite alternate}
+.fx .o2{width:min(640px,95vw);aspect-ratio:1;right:-16%;top:18%;background:radial-gradient(circle,#a9c2e8 0%,#a9c2e800 65%);opacity:.6;animation:orb2 26s ease-in-out infinite alternate}
+.fx .o3{width:min(520px,80vw);aspect-ratio:1;left:30%;bottom:-20%;background:radial-gradient(circle,#dfe7f4 0%,#dfe7f400 65%);animation:orb3 30s ease-in-out infinite alternate}
+@keyframes orb1{to{transform:translate(18%,14%) scale(1.12)}}
+@keyframes orb2{to{transform:translate(-22%,-10%) scale(.9)}}
+@keyframes orb3{to{transform:translate(-20%,-18%) scale(1.15)}}
+/* feixe de luz vindo do topo */
+.fx .beam{position:absolute;left:50%;top:-30vh;width:120vw;height:90vh;margin-left:-60vw;background:radial-gradient(ellipse 35% 60% at 50% 0%,#ffffffcc 0%,#ffffff00 70%);opacity:.9}
+/* piso de grade em perspectiva 3D, rolando devagar */
+.fx .floor{position:absolute;left:-40%;right:-40%;bottom:-6vh;height:44vh;overflow:hidden;
+  transform:perspective(520px) rotateX(68deg);transform-origin:50% 100%;
+  -webkit-mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 90%);mask-image:linear-gradient(to top,#000 0%,#000 25%,transparent 90%)}
+.fx .floor i{position:absolute;left:0;right:0;top:-72px;bottom:0;
+  background-image:linear-gradient(#2f5fae2e 1px,transparent 1px),linear-gradient(90deg,#2f5fae2e 1px,transparent 1px);background-size:72px 72px;
+  animation:piso 5s linear infinite}
+@keyframes piso{to{transform:translateY(72px)}}
+/* linha de horizonte brilhando */
+.fx .horizon{position:absolute;left:0;right:0;bottom:34vh;height:1px;background:linear-gradient(90deg,transparent,#9fbbe6 30%,#ffffff 50%,#9fbbe6 70%,transparent);opacity:.45;filter:blur(.5px)}
+@media(max-width:700px){.fx-title.in .w{animation-iteration-count:2}}
+@media(max-width:700px){.fx .floor{height:32vh}.fx .horizon{bottom:24vh}.fx .orb{filter:blur(40px);animation:none}.fx .o3{display:none}}
+@media(max-width:959px){.host figure{max-width:300px}}
+/* seções claras deixam o brilho aparecer */
+.pipes{background:#ffffffb8!important}
+.card,.missing,.fit .yes,.ticket .inc{background:#ffffffeb}
+
+/* ═══ [FX] TÍTULOS: palavras entrando + brilho metálico nas letras ═══ */
+.fx-title .w{display:inline-block;white-space:pre;
+  background:linear-gradient(105deg,#ffffff00 40%,#ffffffe6 50%,#ffffff00 60%) 0 0/260% 100% no-repeat,var(--title);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;transform:translateY(.45em) rotateX(-40deg);filter:blur(10px);transform-origin:50% 100%;
+  transition:opacity .9s var(--expo),transform 1s var(--expo),filter .9s var(--expo);transition-delay:calc(var(--i) * 55ms)}
+.fx-title.in .w{opacity:1;transform:none;filter:blur(0);animation:brilho 5.5s ease-in-out calc(1.2s + var(--i) * 55ms) infinite}
+@keyframes brilho{0%{background-position:160% 0,0 0}45%,100%{background-position:-60% 0,0 0}}
+.dark .fx-title .w{background:linear-gradient(105deg,#ffffff00 40%,#ffffff 50%,#ffffff00 60%) 0 0/260% 100% no-repeat,var(--title-dark);-webkit-background-clip:text;background-clip:text}
+.fx-title .w.mute{background:linear-gradient(105deg,#ffffff00 40%,#c9d6ea 50%,#ffffff00 60%) 0 0/260% 100% no-repeat,linear-gradient(#6f7a8e,#6f7a8e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.fx-title{perspective:600px}
+.fx-title,.fx-title>span:not(.w){background:none!important;-webkit-text-fill-color:initial}
+.fx-title .w{-webkit-text-fill-color:transparent}
+
+/* ═══ [FX] ROLAGEM: parallax suave das fotos (navegadores com scroll-driven animations) ═══ */
+@supports (animation-timeline:view()){
+  .host figure img{animation:parallax linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  @keyframes parallax{from{transform:scale(1.15) translateY(-6%)}to{transform:scale(1.15) translateY(6%)}}
+  .row .n{animation:numero linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+  @keyframes numero{from{opacity:.15;transform:translateX(-14px)}to{opacity:1;transform:none}}
+}
+
+
+/* ═══ [FX] SEÇÃO DA PROVA: preto mais profundo ═══ */
+#prova{background:#030406;position:relative}
+#prova::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 40% at 20% 0%,#2f5fae1f,transparent 70%)}
+#prova .wrap{position:relative}
+
+/* ═══ [FX] BOTÕES: pulso (anel que expande e some) + respiração leve ═══ */
+.btn{position:relative;isolation:isolate}
+/* halo de luz: anel + brilho difuso que expande e some */
+.btn{--glow:#4f7fd0;--ring:#2f5fae}
+.dark .btn,.ticket .buy .btn{--glow:#ffffff;--ring:#ffffff}
+.btn-wa{--glow:#22c55e;--ring:#15803d}
+.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;
+  box-shadow:0 0 0 2px var(--ring),0 0 18px 4px var(--glow),0 0 40px 10px color-mix(in srgb,var(--glow) 45%,transparent);
+  opacity:0;animation:anel 2.6s var(--ease) infinite}
+@keyframes anel{0%{transform:scale(1);opacity:.7}70%,100%{transform:scale(1.05,1.3);opacity:0}}
+.mbar .btn::after{box-shadow:0 0 0 2px var(--ring),0 0 10px 2px var(--glow)}
+/* brilho fixo por trás do botão, pulsando junto */
+.btn::before{content:"";position:absolute;inset:6px 10%;border-radius:inherit;z-index:-2;pointer-events:none;
+  background:var(--glow);filter:blur(18px);opacity:.35;animation:aura 2.6s var(--ease) infinite}
+@keyframes aura{0%,100%{opacity:.25;transform:translateY(6px) scale(.92)}50%{opacity:.6;transform:translateY(8px) scale(1.04)}}
+/* reflexo de luz atravessando o botão */
+.btn-primary{background:linear-gradient(110deg,#ffffff00 38%,#ffffff47 50%,#ffffff00 62%) -150% 0/250% 100% no-repeat,var(--btn);animation:respira 2.6s var(--ease) infinite,reflexo 3.4s ease-in-out 1s infinite}
+.dark .btn-primary,.ticket .buy .btn-primary{background:linear-gradient(110deg,#ffffff00 38%,#c9daf2 50%,#ffffff00 62%) -150% 0/250% 100% no-repeat,linear-gradient(180deg,#ffffff,#e2e9f3);animation:respira 2.6s var(--ease) infinite,reflexo 3.4s ease-in-out 1s infinite}
+.btn-wa{background:linear-gradient(110deg,#ffffff00 38%,#ffffff40 50%,#ffffff00 62%) -150% 0/250% 100% no-repeat,#15803d}
+@keyframes reflexo{0%{background-position:-150% 0,0 0}55%,100%{background-position:250% 0,0 0}}
+.btn-wa{animation:respira 2.6s var(--ease) infinite,reflexo 3.4s ease-in-out 1s infinite}
+@keyframes respira{0%,100%{scale:1}50%{scale:1.025}}
+.btn:hover::before{opacity:.75}
+.btn[disabled]::before{display:none}
+.btn[disabled]::after{display:none}
+/* só o botão principal de cada tela pulsa. Navegação do formulário e ação secundária ficam estáveis */
+#next,#next::before,#next::after{animation:none!important}
+#next::before,#next::after{display:none}
+#done-wa:not([data-solo]),#done-wa:not([data-solo])::before,#done-wa:not([data-solo])::after{animation:none!important}
+#done-wa:not([data-solo])::before,#done-wa:not([data-solo])::after{display:none}
+html{overflow-x:clip}
+.mbar{overflow:clip}
+
+/* ═══ [FX] BLOCOS E CÍRCULOS FLUTUANDO NO AR (sombra 3D em camadas) ═══ */
+:root{
+  --float:0 1px 1px #0c0f150a,0 3px 6px #0c0f150d,0 10px 20px -6px #1c2a4424,0 28px 56px -16px #1c2a4438,0 60px 110px -40px #1c2a444d;
+  --float-hi:0 1px 1px #0c0f150a,0 4px 8px #0c0f1512,0 16px 32px -8px #1c2a4430,0 40px 80px -20px #1c2a4447,0 90px 140px -50px #1c2a4466;
+  --float-dark:0 0 0 1px #ffffff12,0 20px 40px -12px #000000cc,0 60px 120px -40px #2f5fae40;
+}
+.card,.missing,.fit>div,.ticket,.pledge,.compare>div,.faq details,.score,.byline img,.brand,.done .ok,.host figure,.quote .shot{
+  box-shadow:var(--float)!important;transition:scale .5s var(--expo),box-shadow .5s var(--expo)}
+.faq details{box-shadow:none!important}
+.score{box-shadow:none!important}
+.host figure,.quote .shot,#prova .shot,.compare .with,.ticket .buy{box-shadow:var(--float-dark)!important}
+.ticket{box-shadow:var(--float-hi)!important}
+.byline img,.done .ok{border-radius:50%}
+/* flutuação: usa a propriedade "translate" para não brigar com a animação de entrada */
+.card,.missing,.fit>div,.ticket,.pledge,.compare>div,.host figure{animation:flutua 7s ease-in-out infinite}
+.missing,.fit .no,.compare .with{animation-delay:-2.3s}
+.fit .yes,.pledge,.host figure{animation-delay:-4.6s}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(hover:hover){
+  .card:hover,.missing:hover,.fit>div:hover,.ticket:hover,.pledge:hover,.compare>div:hover{scale:1.012;box-shadow:var(--float-hi)!important}
+  .compare .with:hover{box-shadow:var(--float-dark),0 80px 140px -50px #2f5fae66!important}
+}
+
+
+dialog{--btn:linear-gradient(180deg,#3a4254 0%,#171c26 52%,#0c0f15 100%);--tx:#0c0f15;--tx-2:#4a5263;--tx-3:#646d7f;--line:#0c0f1512;--line-2:#0c0f1522;--accent:#2f5fae;color:#4a5263}
+dialog h2,dialog legend{background:linear-gradient(170deg,#0c0f15 35%,#2c3547 70%,#5a6981 100%);-webkit-background-clip:text;background-clip:text}
+
+
+/* ═══ PRETO + BRANCO: blocos em preto real e seções claras intercaladas ═══ */
+:root{--block:linear-gradient(180deg,#0a0a0c 0%,#000 100%)}
+.out,.fit>div,.fit .yes,.offer,.quote,.pledge,.compare .without,.pass{background:var(--block)}
+.offer{background:radial-gradient(120% 80% at 50% 0%,#2f5fae2e,transparent 60%),var(--block)}
+.count span:not(.lbl){background:#000}
+.bar{background:#000000eb}
+.hero,.sec:not(.light){background:transparent}
+
+/* seções claras */
+.light{background:#ffffff;
+  --tx:#0c0f15;--tx-2:#4a5263;--tx-3:#646d7f;--line:#0c0f1514;--line-2:#0c0f1526;
+  --title:linear-gradient(170deg,#000 30%,#2c3547 70%,#5a6981 100%)}
+.light{color:var(--tx-2)}
+.light .fx-title .w{background:linear-gradient(105deg,#ffffff00 40%,#ffffffd9 50%,#ffffff00 60%) 0 0/260% 100% no-repeat,var(--title);-webkit-background-clip:text;background-clip:text}
+/* blocos pretos dentro das seções claras mantêm o texto claro e ganham sombra no ar */
+.light .out,.light .fit>div,.light .offer,.light .pledge{
+  --tx:#eef2f8;--tx-2:#a7b1c2;--tx-3:#8a94a6;--line:#ffffff14;--line-2:#ffffff24;
+  --title:linear-gradient(180deg,#ffffff 15%,#dbe6f5 60%,#9fb2cf 100%);
+  color:var(--tx-2);box-shadow:0 1px 2px #0000001a,0 20px 40px -16px #00000059,0 50px 90px -40px #1c2a4473}
+.light .fit .yes{box-shadow:0 1px 2px #0000001a,0 24px 48px -16px #00000066,0 60px 110px -40px #2f5fae55}
+/* botão principal em seção clara: preto com degradê */
+.light .btn-primary{color:#fff;background:linear-gradient(110deg,#ffffff00 38%,#ffffff47 50%,#ffffff00 62%) -150% 0/250% 100% no-repeat,linear-gradient(180deg,#3a4254 0%,#171c26 52%,#000 100%);box-shadow:inset 0 1px 0 #ffffff3d,0 0 0 1px #000,0 16px 32px -16px #1c2a44cc}
+.light .btn{--glow:#4f7fd0;--ring:#2f5fae}
+.light .faq summary .ic{color:var(--tx-3)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+  .fx .au,.pass,.out,.offer,.host figure,.compare .with,.btn,.btn::before,.btn::after{animation:none!important}
+  .fx-title .w{opacity:1!important;transform:none!important;filter:none!important;animation:none!important;transition:none!important}
+}
+</style>
+<script>
+(function(d){var h=d.documentElement;h.classList.add('js');
+  if(location.protocol==='file:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))h.classList.add('draft');})(document);
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></symbol>
+</svg>
+
+<!-- ✨ FUNDO: aurora + feixes em X da marca (decorativo) -->
+<div class="fx" aria-hidden="true"><span class="au a1"></span><span class="au a2"></span><span class="au a3"></span><span class="x x1"></span><span class="x x2"></span></div>
+
+<p class="draft-bar"><b>MODO RASCUNHO</b>: só você vê isto. Bordas amarelas indicam dado a preencher. Blocos com <code>data-draft</code> ficam ocultos no ar até você preencher.</p>
+
+<!-- ═════ BARRA COM CONTAGEM (fica no topo ao rolar) ═════ -->
+<div class="bar">
+  <div class="wrap bar-in">
+    <span class="brand"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 585 150" width="142" height="36" role="img" aria-label="Full10X"><defs><linearGradient id="dft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2e3e6"/><stop offset=".13" stop-color="#fbfcfe"/><stop offset=".33" stop-color="#c3d6ef"/><stop offset=".47" stop-color="#ffffff"/><stop offset=".60" stop-color="#dfe4ea"/><stop offset=".83" stop-color="#8b9199"/><stop offset="1" stop-color="#555a62"/></linearGradient><linearGradient id="dbt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eceef1"/><stop offset=".18" stop-color="#fbfcfd"/><stop offset=".40" stop-color="#d0e0f3"/><stop offset=".56" stop-color="#f4f7fc"/><stop offset=".80" stop-color="#b4bac3"/><stop offset="1" stop-color="#767b84"/></linearGradient><linearGradient id="dst" x1="0" x2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff"/><stop offset=".7" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><filter id="dsht" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#1c2a44" flood-opacity=".38"/></filter><linearGradient id="wgdt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#c9d8ec"/><stop offset=".55" stop-color="#ffffff"/><stop offset=".8" stop-color="#9fb3cf"/><stop offset="1" stop-color="#e6f0fc"/></linearGradient></defs><g transform="scale(0.29296875)"><defs><clipPath id="dct"><rect x="36" y="0" width="440" height="512"/></clipPath></defs><g clip-path="url(#dct)"><g transform="translate(256 256) rotate(-30)" ><rect x="-400" y="-50" width="800" height="100" fill="url(#dbt)"/><rect x="-400" y="-50" width="800" height="100" fill="none" stroke="#4b5260" stroke-opacity=".28" stroke-width="2"/><rect x="-400" y="-8" width="800" height="3" fill="url(#dst)" opacity=".95"/></g><g filter="url(#dsht)"><g transform="translate(256 256) rotate(24)" ><rect x="-400" y="-50" width="800" height="100" fill="url(#dft)"/><rect x="-400" y="-50" width="800" height="100" fill="none" stroke="#4b5260" stroke-opacity=".28" stroke-width="2"/><rect x="-400" y="-8" width="800" height="3" fill="url(#dst)" opacity=".95"/></g></g></g></g><g transform="translate(184 118.75) scale(1.25)"><path d="M7.1000000000000005 0.0V-70.0H51.800000000000004V-60.300000000000004H19.1V-39.800000000000004H45.800000000000004V-30.3H19.1V0.0Z M76.9 1.2000000000000002Q70.8 1.2000000000000002 66.45 -1.25Q62.1 -3.7 59.8 -8.65Q57.5 -13.600000000000001 57.5 -20.900000000000002V-50.400000000000006H69.5V-22.1Q69.5 -15.600000000000001 72.25 -12.25Q75.0 -8.9 80.6 -8.9Q84.2 -8.9 87.05000000000001 -10.600000000000001Q89.9 -12.3 91.55000000000001 -15.55Q93.2 -18.8 93.2 -23.5V-50.400000000000006H105.2V0.0H94.6L93.7 -8.4Q91.4 -4.0 87.05000000000001 -1.4Q82.7 1.2000000000000002 76.9 1.2000000000000002Z M115.10000000000001 0.0V-72.0H127.10000000000001V0.0Z M137.0 0.0V-72.0H149.0V0.0Z M167.70000000000002 0.0V-56.300000000000004L155.3 -53.1V-62.400000000000006L172.50000000000003 -70.0H180.00000000000003V0.0Z M218.50000000000003 1.2000000000000002Q209.00000000000003 1.2000000000000002 202.20000000000005 -3.35Q195.40000000000003 -7.9 191.75000000000003 -16.05Q188.10000000000002 -24.200000000000003 188.10000000000002 -35.0Q188.10000000000002 -45.800000000000004 191.75000000000003 -53.95Q195.40000000000003 -62.1 202.20000000000005 -66.65Q209.00000000000003 -71.2 218.50000000000003 -71.2Q227.90000000000003 -71.2 234.65000000000003 -66.65Q241.40000000000003 -62.1 245.05000000000004 -53.95Q248.70000000000005 -45.800000000000004 248.70000000000005 -35.0Q248.70000000000005 -24.200000000000003 245.05000000000004 -16.05Q241.40000000000003 -7.9 234.65000000000003 -3.35Q227.90000000000003 1.2000000000000002 218.50000000000003 1.2000000000000002ZM218.40000000000003 -9.600000000000001Q223.70000000000005 -9.600000000000001 227.80000000000004 -12.650000000000002Q231.90000000000003 -15.700000000000001 234.15000000000003 -21.400000000000002Q236.40000000000003 -27.1 236.40000000000003 -35.0Q236.40000000000003 -42.900000000000006 234.15000000000003 -48.60000000000001Q231.90000000000003 -54.300000000000004 227.80000000000004 -57.35000000000001Q223.70000000000005 -60.400000000000006 218.40000000000003 -60.400000000000006Q213.10000000000002 -60.400000000000006 209.00000000000003 -57.35000000000001Q204.90000000000003 -54.300000000000004 202.65000000000003 -48.60000000000001Q200.40000000000003 -42.900000000000006 200.40000000000003 -35.0Q200.40000000000003 -27.1 202.65000000000003 -21.400000000000002Q204.90000000000003 -15.700000000000001 209.00000000000003 -12.650000000000002Q213.10000000000002 -9.600000000000001 218.40000000000003 -9.600000000000001Z M253.3 0.0 275.1 -35.4 253.10000000000002 -70.0H266.90000000000003L282.8 -44.900000000000006L297.5 -70.0H311.1L289.3 -34.9L311.5 0.0H297.70000000000005L281.6 -25.400000000000002L266.90000000000003 0.0Z" fill="url(#wgdt)"/></g></svg></span>
+    <!-- ⚙️ DATA DA LIVE para a contagem: horário de Brasília (-03:00) -->
+    <div class="count" id="count" data-alvo="2026-10-25T14:00:00-03:00" aria-label="Tempo até a aula">
+      <span class="lbl">Começa em</span>
+      <span><b id="cd-d">--</b><small>dias</small></span>
+      <span><b id="cd-h">--</b><small>horas</small></span>
+      <span><b id="cd-m">--</b><small>min</small></span>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- ═════ ✏️ ABERTURA (promessa + prova colada) ═════ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="date"><i aria-hidden="true"></i>Domingo, 25/10, às 14h · ao vivo no Google Meet</span>
+    <!-- ✏️ TÍTULO PADRÃO. Títulos por anúncio: ?h=CHAVE (bloco abaixo) -->
+    <h1 id="h1" class="fx-title"><span id="h1a">Feche cliente todo mês</span> <span id="h1b">sem depender de indicação.</span></h1>
+    <script>
+    /* ⚙️ TÍTULO POR ANÚNCIO — mesmas chaves da variante A, para o mesmo anúncio poder apontar para A ou B */
+    (function(){var T={
+      lead:['Você faz tráfego que vende para os outros.','Agora faça vender para a sua agência.'],
+      boleto:['Lead não paga boleto.','Feche quem paga, todo mês, sem depender de indicação.'],
+      mentoria:['Você já assistiu às aulas.','Agora feche cliente todo mês sem depender de indicação.'],
+      indicacao:['Sua agência anuncia todo dia e continua dependendo de indicação.','Veja os 4 funis que resolvem isso.'],
+      prova:['R$100 mil em 90 dias na primeira agência.','Na aula ao vivo eu mostro os 4 funis que fizeram isso.'],
+      funis:['4 funis.','Cliente novo todo mês, sem depender de indicação.']
+    };try{var k=new URLSearchParams(location.search).get('h');if(k&&T[k]){
+      document.getElementById('h1a').textContent=T[k][0];document.getElementById('h1b').textContent=T[k][1];}}catch(e){}})();
+    </script>
+    <p class="lead">Na aula ao vivo eu mostro os <strong>4 funis</strong> que levaram minha primeira agência a <strong>R$100 mil em 90 dias</strong>, e como eles continuam enchendo a agenda comercial hoje.</p>
+
+    <div class="hero-cta">
+      <button type="button" class="btn btn-primary btn-m js-open" data-pos="abertura">Quero minha vaga grátis</button>
+      <p class="small">São 7 perguntas. Leva 2 minutos.</p>
+    </div>
+
+    <!-- 🖼️ MÍDIA: foto do Julio (rosto) -->
+    <div class="proof-chip">
+      <img src="https://i.postimg.cc/2j7NBvTx/Save-Clip-App-770658671-17897189238579975-2780641572603139875-n-(1).jpg" alt="" width="40" height="40">
+      <span><strong>Julio, founder da FULLX</strong><br>+420 clientes atendidos · +R$10 milhões em tráfego</span>
+    </div>
+
+    <!-- INGRESSO 3D: o elemento memorável da variante B -->
+    <div class="pass-wrap" aria-hidden="true">
+      <div class="pass">
+        <div class="pass-main">
+          <p class="t">Aula ao vivo FULLX</p>
+          <dl>
+            <dt>Data</dt><dd>Domingo, 25/10/2026</dd>
+            <dt>Horário</dt><dd>14h de Brasília</dd>
+            <dt>Onde</dt><dd>Google Meet</dd>
+            <dt>Para</dt><dd>Donos de agência e gestores</dd>
+          </dl>
+        </div>
+        <div class="pass-stub"><span class="big">R$0</span><s>R$2.500</s></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═════ ✏️ O QUE MUDA (promessa desdobrada em 3 resultados, cada um com o "como") ═════ -->
+<section class="sec light" id="resultado">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2 class="fx-title">Três coisas mudam quando os funis rodam.</h2>
+      <p class="lead">Nenhuma depende de você estar na call ou de alguém te indicar.</p>
+    </div>
+    <div class="outs">
+      <article class="out reveal">
+        <p class="from">O mês depende de indicação</p>
+        <h3>Lead qualificado entra toda semana</h3>
+        <p>Quatro funis abastecem o mesmo comercial ao mesmo tempo.</p>
+        <p class="how">Na aula: os 4 funis e os anúncios que rodam neles.</p>
+      </article>
+      <article class="out reveal">
+        <p class="from">A semana vai em call com curioso</p>
+        <h3>Só chega na call quem tem verba</h3>
+        <p>Um formulário pontua cada lead antes de ele tomar seu tempo.</p>
+        <p class="how">Na aula: as perguntas, os pontos e a nota de corte.</p>
+      </article>
+      <article class="out reveal">
+        <p class="from">Só você vende e o boleto atrasa</p>
+        <h3>Outra pessoa fecha e o cliente fica</h3>
+        <p>Roteiro comercial que outro executa e uma régua de cobrança.</p>
+        <p class="how">Na aula: o CRM, o roteiro e o sistema de cobrança.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ✏️ PROVA EM LINHA DO TEMPO ═════ -->
+<section class="sec" id="prova">
+  <div class="wrap">
+    <div class="head reveal"><h2 class="fx-title">A promessa vem de uma linha do tempo, não de uma teoria.</h2></div>
+    <!-- ✏️ MARCOS: só o que você prova com print. Confira o ano da primeira agência -->
+    <ol class="time">
+      <li class="reveal"><span class="pt" aria-hidden="true"></span><div><span class="k">2024</span><span class="big">Primeira agência aberta</span><p data-draft><span class="todo">[CONTE EM 1 LINHA COMO COMEÇOU]</span></p></div></li>
+      <li class="reveal"><span class="pt" aria-hidden="true"></span><div><span class="k">90 dias depois</span><span class="big">R$100 mil de faturamento</span><p>Com os mesmos 4 funis que você vai ver na aula.</p></div></li>
+      <li class="reveal"><span class="pt" aria-hidden="true"></span><div><span class="k">Hoje</span><span class="big">+420 clientes atendidos</span><p>E +R$10 milhões em tráfego gerenciado, com comercial e cobrança rodando em sistema próprio.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════ ✏️ A AULA ═════ -->
+<section class="sec light" id="aula">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>O que eu abro ao vivo, na tela.</h2>
+      <p class="lead">Na ordem em que o dinheiro passa pela agência.</p>
+    </div>
+    <ol class="agenda">
+      <li class="reveal"><span class="n">1</span><div><h3>Atrair</h3><p>Os 4 funis de captação e os ângulos de anúncio que trazem dono de empresa com verba.</p></div></li>
+      <li class="reveal"><span class="n">2</span><div><h3>Filtrar</h3><p>O formulário que pontua o lead e a nota de corte que decide quem vai para a call.</p></div></li>
+      <li class="reveal"><span class="n">3</span><div><h3>Fechar</h3><p>O CRM com as etapas do funil e o roteiro que outro vendedor executa.</p></div></li>
+      <li class="reveal"><span class="n">4</span><div><h3>Sustentar</h3><p>A régua de cobrança e o processo operacional que segura o cliente.</p></div></li>
+    </ol>
+    <div class="final reveal" style="margin-top:48px">
+      <button type="button" class="btn btn-primary btn-m js-open" data-pos="aula">Quero minha vaga grátis</button>
+      <p class="small">No final eu apresento a mentoria FULLX. Fica quem quiser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ✏️ QUEM CONDUZ ═════ -->
+<section class="sec" id="julio">
+  <div class="wrap host">
+    <!-- 🖼️ MÍDIA: foto do Julio (4:5) -->
+    <figure class="reveal"><img src="https://i.postimg.cc/2j7NBvTx/Save-Clip-App-770658671-17897189238579975-2780641572603139875-n-(1).jpg" alt="Julio, founder da FULLX" width="420" height="525" loading="lazy"></figure>
+    <div class="reveal">
+      <h2>Quem vai abrir a tela.</h2>
+      <p>Sou o Julio, founder da FULLX. Opero agência com tráfego, comercial e cobrança próprios.</p>
+      <p>Tudo o que você vai ver foi construído para a minha operação. <strong>Eu mostro o que roda, não o que li.</strong></p>
+      <!-- ✏️ DEPOIMENTO. Oculto no ar até você preencher e apagar data-draft -->
+      <div class="quote" data-draft>
+        <blockquote>“Na primeira semana evitei 3 cancelamentos e fechei 4 clientes novos.”</blockquote>
+        <cite><span class="todo">[NOME DO MENTORADO]</span>, <span class="todo">[AGÊNCIA / CIDADE]</span>, mentorado FULLX</cite>
+        <!-- 🖼️ MÍDIA: print que comprova (9:16) -->
+        <div class="shot"><span class="todo">[INSERIR PRINT REAL]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ✏️ PARA QUEM ═════ -->
+<section class="sec light" id="para-quem">
+  <div class="wrap">
+    <div class="head reveal"><h2>Essa promessa é para quem já tem cliente.</h2></div>
+    <div class="fit">
+      <div class="yes reveal">
+        <h3>É para você se</h3>
+        <ul>
+          <li>É gestor de tráfego e fatura a partir de R$6 mil por mês.</li>
+          <li>Tem agência entre R$10 mil e R$30 mil por mês.</li>
+          <li>Já executa tráfego e quer previsibilidade de venda.</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>Não é para você se</h3>
+        <ul>
+          <li>Ainda não tem nenhum cliente.</li>
+          <li>Procura atalho para faturar sem anunciar.</li>
+          <li>Vai assistir e não aplicar nada.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ✏️ OFERTA ═════ -->
+<section class="sec" id="vaga">
+  <div class="wrap">
+    <div class="offer reveal">
+      <!-- ✏️ ANCORAGEM: valor real da mentoria individual -->
+      <p class="was">Mentoria individual FULLX: <s>a partir de R$2.500</s></p>
+      <span class="big">R$0</span>
+      <p>Domingo, 25/10, às 14h, ao vivo no Google Meet.</p>
+      <button type="button" class="btn btn-primary js-open" data-pos="oferta">Quero minha vaga grátis</button>
+      <ul>
+        <li>A aula ao vivo, com perguntas no final.</li>
+        <li>A gravação, só para quem se inscreveu.</li>
+        <li>O grupo da aula no WhatsApp, com link e lembrete.</li>
+        <li>Suas respostas lidas antes, para eu cobrir o seu caso.</li>
+      </ul>
+      <!-- ✏️ ESCASSEZ REAL: confirme o limite da sua sala do Meet -->
+      <p class="seats"><strong><span class="todo">[100]</span> lugares.</strong> É o limite da sala do Google Meet. Quando lotar, a inscrição fecha.</p>
+    </div>
+    <div class="pledge reveal">
+      <h3>Em 20 minutos você anota uma ação para aplicar na sua agência. Se não anotar, pode sair.</h3>
+      <p>Sem cartão e sem plataforma. A apresentação da mentoria fica para o final.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ✏️ FAQ (para quem é / o que é / e se meu caso for diferente / por que você / como começo) ═════ -->
+<section class="sec light" id="faq">
+  <div class="wrap">
+    <div class="head reveal"><h2>Antes de garantir a vaga.</h2></div>
+    <div class="faq reveal">
+      <details><summary>Para quem é a aula?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Gestores de tráfego a partir de R$6 mil por mês e donos de agência entre R$10 mil e R$30 mil por mês.</p></details>
+      <details><summary>O que exatamente acontece na aula?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Eu abro a operação na tela: os 4 funis, o formulário com pontuação, o CRM, o roteiro e a cobrança. No final respondo perguntas e apresento a mentoria para quem quiser.</p></details>
+      <details><summary>E se a minha agência for de outro nicho?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Os funis são de captação de cliente para agência, não de nicho. Valem para qualquer agência que vende serviço recorrente.</p></details>
+      <details><summary>Por que aprender com você?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Porque a promessa vem do que eu fiz: R$100 mil em 90 dias na primeira agência, +420 clientes atendidos e +R$10 milhões em tráfego gerenciado.</p></details>
+      <details><summary>Como eu começo?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Toque em "Quero minha vaga grátis", responda 7 perguntas e entre no grupo do WhatsApp. O link da aula chega lá.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ✏️ FECHAMENTO ═════ -->
+<section class="sec" id="fechamento">
+  <div class="wrap">
+    <div class="head reveal"><h2>Daqui a 30 dias, de onde vem o seu próximo cliente?</h2></div>
+    <div class="compare">
+      <div class="without reveal">
+        <h3>Se nada mudar</h3>
+        <ul>
+          <li>Da indicação de alguém, se vier.</li>
+          <li>De uma call com curioso.</li>
+          <li>De você, vendendo sozinho.</li>
+        </ul>
+      </div>
+      <div class="with reveal">
+        <h3>Com os 4 funis rodando</h3>
+        <ul>
+          <li>De um funil que roda toda semana.</li>
+          <li>De um lead que já passou pela nota de corte.</li>
+          <li>De um comercial que fecha sem você.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="final reveal">
+      <button type="button" class="btn btn-primary btn-m js-open" data-pos="fechamento">Quero minha vaga grátis</button>
+      <p class="small">Domingo, 25/10, às 14h. Grátis, no Google Meet.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="brand"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 585 150" width="124" height="32" role="img" aria-label="Full10X"><defs><linearGradient id="dff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2e3e6"/><stop offset=".13" stop-color="#fbfcfe"/><stop offset=".33" stop-color="#c3d6ef"/><stop offset=".47" stop-color="#ffffff"/><stop offset=".60" stop-color="#dfe4ea"/><stop offset=".83" stop-color="#8b9199"/><stop offset="1" stop-color="#555a62"/></linearGradient><linearGradient id="dbf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eceef1"/><stop offset=".18" stop-color="#fbfcfd"/><stop offset=".40" stop-color="#d0e0f3"/><stop offset=".56" stop-color="#f4f7fc"/><stop offset=".80" stop-color="#b4bac3"/><stop offset="1" stop-color="#767b84"/></linearGradient><linearGradient id="dsf" x1="0" x2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff"/><stop offset=".7" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><filter id="dshf" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#1c2a44" flood-opacity=".38"/></filter><linearGradient id="wgdf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#c9d8ec"/><stop offset=".55" stop-color="#ffffff"/><stop offset=".8" stop-color="#9fb3cf"/><stop offset="1" stop-color="#e6f0fc"/></linearGradient></defs><g transform="scale(0.29296875)"><defs><clipPath id="dcf"><rect x="36" y="0" width="440" height="512"/></clipPath></defs><g clip-path="url(#dcf)"><g transform="translate(256 256) rotate(-30)" ><rect x="-400" y="-50" width="800" height="100" fill="url(#dbf)"/><rect x="-400" y="-50" width="800" height="100" fill="none" stroke="#4b5260" stroke-opacity=".28" stroke-width="2"/><rect x="-400" y="-8" width="800" height="3" fill="url(#dsf)" opacity=".95"/></g><g filter="url(#dshf)"><g transform="translate(256 256) rotate(24)" ><rect x="-400" y="-50" width="800" height="100" fill="url(#dff)"/><rect x="-400" y="-50" width="800" height="100" fill="none" stroke="#4b5260" stroke-opacity=".28" stroke-width="2"/><rect x="-400" y="-8" width="800" height="3" fill="url(#dsf)" opacity=".95"/></g></g></g></g><g transform="translate(184 118.75) scale(1.25)"><path d="M7.1000000000000005 0.0V-70.0H51.800000000000004V-60.300000000000004H19.1V-39.800000000000004H45.800000000000004V-30.3H19.1V0.0Z M76.9 1.2000000000000002Q70.8 1.2000000000000002 66.45 -1.25Q62.1 -3.7 59.8 -8.65Q57.5 -13.600000000000001 57.5 -20.900000000000002V-50.400000000000006H69.5V-22.1Q69.5 -15.600000000000001 72.25 -12.25Q75.0 -8.9 80.6 -8.9Q84.2 -8.9 87.05000000000001 -10.600000000000001Q89.9 -12.3 91.55000000000001 -15.55Q93.2 -18.8 93.2 -23.5V-50.400000000000006H105.2V0.0H94.6L93.7 -8.4Q91.4 -4.0 87.05000000000001 -1.4Q82.7 1.2000000000000002 76.9 1.2000000000000002Z M115.10000000000001 0.0V-72.0H127.10000000000001V0.0Z M137.0 0.0V-72.0H149.0V0.0Z M167.70000000000002 0.0V-56.300000000000004L155.3 -53.1V-62.400000000000006L172.50000000000003 -70.0H180.00000000000003V0.0Z M218.50000000000003 1.2000000000000002Q209.00000000000003 1.2000000000000002 202.20000000000005 -3.35Q195.40000000000003 -7.9 191.75000000000003 -16.05Q188.10000000000002 -24.200000000000003 188.10000000000002 -35.0Q188.10000000000002 -45.800000000000004 191.75000000000003 -53.95Q195.40000000000003 -62.1 202.20000000000005 -66.65Q209.00000000000003 -71.2 218.50000000000003 -71.2Q227.90000000000003 -71.2 234.65000000000003 -66.65Q241.40000000000003 -62.1 245.05000000000004 -53.95Q248.70000000000005 -45.800000000000004 248.70000000000005 -35.0Q248.70000000000005 -24.200000000000003 245.05000000000004 -16.05Q241.40000000000003 -7.9 234.65000000000003 -3.35Q227.90000000000003 1.2000000000000002 218.50000000000003 1.2000000000000002ZM218.40000000000003 -9.600000000000001Q223.70000000000005 -9.600000000000001 227.80000000000004 -12.650000000000002Q231.90000000000003 -15.700000000000001 234.15000000000003 -21.400000000000002Q236.40000000000003 -27.1 236.40000000000003 -35.0Q236.40000000000003 -42.900000000000006 234.15000000000003 -48.60000000000001Q231.90000000000003 -54.300000000000004 227.80000000000004 -57.35000000000001Q223.70000000000005 -60.400000000000006 218.40000000000003 -60.400000000000006Q213.10000000000002 -60.400000000000006 209.00000000000003 -57.35000000000001Q204.90000000000003 -54.300000000000004 202.65000000000003 -48.60000000000001Q200.40000000000003 -42.900000000000006 200.40000000000003 -35.0Q200.40000000000003 -27.1 202.65000000000003 -21.400000000000002Q204.90000000000003 -15.700000000000001 209.00000000000003 -12.650000000000002Q213.10000000000002 -9.600000000000001 218.40000000000003 -9.600000000000001Z M253.3 0.0 275.1 -35.4 253.10000000000002 -70.0H266.90000000000003L282.8 -44.900000000000006L297.5 -70.0H311.1L289.3 -34.9L311.5 0.0H297.70000000000005L281.6 -25.400000000000002L266.90000000000003 0.0Z" fill="url(#wgdf)"/></g></svg></span>
+    <span>© <span id="ano">2026</span> FULLX. Educação e sistemas para donos de agência. Resultados variam de acordo com a aplicação.</span>
+    <!-- 🔗 LINK: perfil do Instagram -->
+    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><button type="button" class="btn btn-primary js-open" data-pos="barra-celular">Quero minha vaga grátis</button></div>
+
+<script>
+/* ⏱️ CONTAGEM REGRESSIVA até a live (lê data-alvo). Depois do início, mostra "Ao vivo agora". */
+(function(){var el=document.getElementById('count');if(!el)return;var alvo=new Date(el.dataset.alvo).getTime();
+  function p(n){return n<10?'0'+n:''+n}
+  function tick(){var r=alvo-Date.now();
+    if(r<=0){el.innerHTML='<span class="lbl" style="display:inline;color:#eef2f8">Ao vivo agora</span>';clearInterval(t);return}
+    var d=Math.floor(r/864e5),h=Math.floor(r%864e5/36e5),m=Math.floor(r%36e5/6e4);
+    document.getElementById('cd-d').textContent=p(d);document.getElementById('cd-h').textContent=p(h);document.getElementById('cd-m').textContent=p(m);}
+  tick();var t=setInterval(tick,30000);})();
+</script>
+
+<!-- ═════ ✏️ FORMULÁRIO (abre em janela, retoma de onde parou) ═════ -->
+<dialog id="dlg" aria-labelledby="dlg-t">
+  <div class="dlg-top">
+    <div class="dlg-row">
+      <span id="dlg-t">Inscrição na aula ao vivo</span>
+      <button type="button" class="close" id="dlg-close" aria-label="Fechar"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+    <span class="prog-t" id="prog-t" aria-live="polite">Pergunta 1 de 7</span>
+  </div>
+
+  <form id="form" novalidate>
+    <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+    <input type="hidden" name="utm_content"><input type="hidden" name="utm_term"><input type="hidden" name="fbclid">
+    <div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="empresa_site" tabindex="-1" autocomplete="off"></label></div>
+
+    <!-- ✏️ PERGUNTAS. data-s = pontos de qualificação · data-c = cano (tag para o SDR, não pontua)
+         Pontuação máxima 13. Corte em CONFIG.NOTA_CORTE (8). Se mudar aqui, mude a ficha do topo. -->
+    <fieldset data-step="1">
+      <legend>Como você se chama?</legend>
+      <p class="hint">É assim que eu vou te chamar na aula.</p>
+      <div class="fld"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="given-name" required></div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+    <fieldset data-step="2" hidden>
+      <legend>Para onde mandamos o link da aula?</legend>
+      <p class="hint">O link e o lembrete chegam pelo WhatsApp. Sem spam.</p>
+      <div class="fld"><label for="f-wa">WhatsApp com DDD</label><input id="f-wa" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 91234-5678" required></div>
+      <div class="fld"><label for="f-ig">Instagram da agência <span class="muted">(opcional)</span></label><input id="f-ig" name="instagram" autocomplete="off" placeholder="@suaagencia"></div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+    <fieldset data-step="3" hidden>
+      <legend>Hoje, você é…</legend>
+      <p class="hint">Para a aula falar da sua realidade.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="perfil" value="dono" data-s="3">Dono ou sócio de agência</label>
+        <label class="opt"><input type="radio" name="perfil" value="gestor" data-s="2">Gestor de tráfego com clientes próprios</label>
+        <label class="opt"><input type="radio" name="perfil" value="func" data-s="0">Trabalho em uma agência (não decido)</label>
+        <label class="opt"><input type="radio" name="perfil" value="comecando" data-s="0">Ainda não tenho cliente</label>
+      </div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+    <fieldset data-step="4" hidden>
+      <legend>Quanto você fatura por mês?</legend>
+      <p class="hint">Média dos últimos 3 meses.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="faturamento" value="ate-6k" data-s="0">Até R$6 mil</label>
+        <label class="opt"><input type="radio" name="faturamento" value="6-10k" data-s="2">R$6 mil a R$10 mil</label>
+        <label class="opt"><input type="radio" name="faturamento" value="10-30k" data-s="4">R$10 mil a R$30 mil</label>
+        <label class="opt"><input type="radio" name="faturamento" value="30-80k" data-s="3">R$30 mil a R$80 mil</label>
+        <label class="opt"><input type="radio" name="faturamento" value="80k+" data-s="2">Acima de R$80 mil</label>
+      </div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+    <fieldset data-step="5" hidden>
+      <legend>Qual cano mais vaza na sua agência hoje?</legend>
+      <p class="hint">Eu uso isso para escolher os exemplos da aula.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="gargalo" value="atrair" data-s="0">Atrair: dependo de indicação</label>
+        <label class="opt"><input type="radio" name="gargalo" value="filtrar" data-s="0">Filtrar: lead chega sem verba</label>
+        <label class="opt"><input type="radio" name="gargalo" value="fechar" data-s="0">Fechar: a call não fecha ou só eu vendo</label>
+        <label class="opt"><input type="radio" name="gargalo" value="sustentar" data-s="0">Sustentar: cliente atrasa ou cancela em 3 meses</label>
+      </div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+    <fieldset data-step="6" hidden>
+      <legend>Você já investiu em formação para a sua agência?</legend>
+      <p class="hint">Curso, mentoria ou consultoria paga.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="formacao" value="mentoria" data-s="2">Sim, já paguei mentoria ou consultoria</label>
+        <label class="opt"><input type="radio" name="formacao" value="curso" data-s="1">Sim, já paguei curso online</label>
+        <label class="opt"><input type="radio" name="formacao" value="gratuito" data-s="0">Só consumi conteúdo gratuito</label>
+      </div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+    <fieldset data-step="7" hidden>
+      <legend>Se a mentoria fizer sentido para você depois da aula, qual é a sua situação?</legend>
+      <p class="hint">O investimento da mentoria fica entre R$2.500 e R$5.000. Responda com sinceridade: isso não muda sua vaga na aula.</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="momento" value="agora" data-s="4">Consigo investir agora</label>
+        <label class="opt"><input type="radio" name="momento" value="60-dias" data-s="2">Consigo em até 60 dias</label>
+        <label class="opt"><input type="radio" name="momento" value="sem-verba" data-s="0">Hoje não consigo investir</label>
+        <label class="opt"><input type="radio" name="momento" value="so-aula" data-s="0">Quero só a aula, por enquanto</label>
+      </div>
+      <div class="fld" style="margin-top:16px"><label for="f-sobre">O que você quer que eu cubra na aula? <span class="muted">(opcional)</span></label><textarea id="f-sobre" name="sobre" rows="3" placeholder="Ex.: tenho 6 clientes, fecho por indicação e quero chegar a R$30 mil/mês." style="min-height:96px"></textarea></div>
+      <p class="err" role="alert"></p>
+    </fieldset>
+
+    <div class="nav-f" id="nav-f">
+      <button type="button" class="btn-ghost" id="back" hidden><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Voltar</button>
+      <button type="button" class="btn btn-primary" id="next" style="margin-left:auto">Continuar<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+    <p class="privacy"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Seus dados ficam só com a FULLX e servem para enviar o link da aula.</p>
+
+    <div class="done" id="done" hidden tabindex="-1">
+      <div class="ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></div>
+      <h2>Vaga garantida.</h2>
+      <p id="done-p">O link da aula e o lembrete chegam no seu WhatsApp. Traga os números dos seus últimos 3 meses.</p>
+      <a class="btn btn-wa" id="done-grupo" href="#" target="_blank" rel="noopener" hidden><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Entrar no grupo da aula</a>
+      <!-- 🔗 AGENDA: 14h às 15h30 de Brasília (17h–18h30 UTC). Ajuste a duração em dates= se a aula for mais longa -->
+      <a class="btn-ghost" id="done-cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aula+ao+vivo+FULLX&dates=20261025T170000Z/20261025T183000Z&details=O+link+do+Google+Meet+chega+no+grupo+do+WhatsApp.&ctz=America/Sao_Paulo" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:10px">Salvar na minha agenda</a>
+      <a class="btn btn-wa" id="done-wa" href="#" target="_blank" rel="noopener" style="margin-top:10px"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Falar agora pelo WhatsApp</a>
+    </div>
+    <div class="done" id="fail" hidden tabindex="-1">
+      <h2>Não conseguimos registrar.</h2>
+      <p>A conexão falhou. Mande as respostas pelo WhatsApp com um toque. Elas já vão preenchidas.</p>
+      <a class="btn btn-wa" id="fail-wa" href="#" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Mandar pelo WhatsApp</a>
+    </div>
+  </form>
+</dialog>
+
+<script>
+/* ⚙️ CONFIG
+   WEBHOOK_URL  recebe as respostas em JSON (Apps Script da planilha, n8n, Make ou Órbita CRM).
+                Vazio = a resposta vai pelo WhatsApp e o evento Lead NÃO dispara no pixel.
+   WHATSAPP     número do time, só dígitos, com 55 e DDD.
+   GRUPO_URL    grupo da aula (botão principal da tela final).
+   NOTA_CORTE   pontuação mínima para LeadQualificado (máximo 13). Quente = qualificado + "consigo investir agora". */
+var CONFIG={
+  WEBHOOK_URL:'https://script.google.com/macros/s/AKfycbwVAbcJL5BcocQ5-FYh7yqGZz22purH7bnaBhqhEWzSq9PZoW0TxZaLPlmfJjFsOgCG/exec', /* 🔗 Apps Script da planilha de leads */
+  WHATSAPP:'5500000000000',    /* 🔗 TROQUE pelo número real */
+  GRUPO_URL:'https://chat.whatsapp.com/LDHW591lcXr0JPnz6tbHxC?mode=gi_t', /* 🔗 grupo da aula */
+  NOTA_CORTE:8,
+  VARIANTE:'B'   /* teste A/B: identifica a página em cada lead e evento */
+};
+
+/* PROGRAMAÇÃO — não precisa mexer */
+(function(){
+'use strict';
+var d=document,w=window;
+var KEY='fullx_aula_b1';
+function store(t){try{return t==='s'?w.sessionStorage:w.localStorage}catch(e){return null}}
+function get(t,k){var s=store(t);try{return s?s.getItem(k):null}catch(e){return null}}
+function set(t,k,v){var s=store(t);try{if(s)s.setItem(k,v)}catch(e){}}
+function del(t,k){var s=store(t);try{if(s)s.removeItem(k)}catch(e){}}
+
+var STD={Lead:1,PageView:1,Schedule:1};
+function track(ev,params,id){
+  try{if(w.fbq){var o=id?{eventID:id}:undefined;STD[ev]?w.fbq('track',ev,params||{},o):w.fbq('trackCustom',ev,params||{},o)}}catch(e){}
+  try{(w.dataLayer=w.dataLayer||[]).push(Object.assign({event:ev,event_id:id||undefined},params||{}))}catch(e){}
+}
+var UTM=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'];
+var q=new URLSearchParams(location.search);
+UTM.forEach(function(k){var v=q.get(k);if(v)set('s',k,v)});
+d.getElementById('ano').textContent=new Date().getFullYear();
+
+
+/* ✨ TÍTULOS: divide em palavras e revela ao entrar na tela (roda depois do título por anúncio ?h=) */
+(function(){
+  var heads=d.querySelectorAll('.fx-title');
+  heads.forEach(function(h){
+    var i=0;
+    (function walk(node,mute){
+      [].slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var frag=d.createDocumentFragment();
+          n.data.split(/(\s+)/).forEach(function(part){
+            if(!part)return;
+            if(/^\s+$/.test(part)){frag.appendChild(d.createTextNode(' '));return}
+            var sp=d.createElement('span');sp.className='w'+(mute?' mute':'');sp.style.setProperty('--i',i++);sp.textContent=part;frag.appendChild(sp);
+          });
+          n.parentNode.replaceChild(frag,n);
+        }else if(n.nodeType===1){walk(n,mute||(n.tagName==='SPAN'&&n.parentNode.classList&&n.parentNode.classList.contains('proof-line')))}
+      });
+    })(h,false);
+    h.setAttribute('aria-label',h.textContent.replace(/\s+/g,' ').trim());
+    [].forEach.call(h.querySelectorAll('.w'),function(w){w.setAttribute('aria-hidden','true')});
+  });
+  if('IntersectionObserver' in w){
+    var ot=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ot.unobserve(e.target)}})},{rootMargin:'0px 0px -12% 0px'});
+    heads.forEach(function(h){ot.observe(h)});
+  }else heads.forEach(function(h){h.classList.add('in')});
+})();
+
+/* revelar ao rolar + barra fixa do celular (IntersectionObserver) */
+var rv=d.querySelectorAll('.reveal'),mbar=d.getElementById('mbar'),heroBtn=d.querySelector('.hero-cta .btn');
+if('IntersectionObserver' in w){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting||e.boundingClientRect.top<0){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  rv.forEach(function(el){io.observe(el)});
+  if(mbar&&heroBtn)new IntersectionObserver(function(es){mbar.classList.toggle('show',!es[0].isIntersecting&&es[0].boundingClientRect.top<0)}).observe(heroBtn);
+}else{rv.forEach(function(el){el.classList.add('on')});if(mbar)mbar.classList.add('show')}
+
+/* ---------- formulário ---------- */
+var dlg=d.getElementById('dlg'),form=d.getElementById('form'),steps=[].slice.call(form.querySelectorAll('fieldset')),
+    TOTAL=steps.length,cur=1,sent=false,started=false,pos='',
+    next=d.getElementById('next'),back=d.getElementById('back'),navf=d.getElementById('nav-f'),
+    prog=d.getElementById('prog'),progT=d.getElementById('prog-t'),done=d.getElementById('done'),fail=d.getElementById('fail');
+var porPonteiro=false;
+form.addEventListener('pointerdown',function(){porPonteiro=true});
+form.addEventListener('keydown',function(){porPonteiro=false});
+
+function vals(){var o={};new FormData(form).forEach(function(v,k){o[k]=String(v).trim()});return o}
+function save(){var o=vals();delete o.empresa_site;o._step=cur;set('l',KEY,JSON.stringify(o))}
+function restore(){
+  var raw=get('l',KEY);if(!raw)return false;var o;try{o=JSON.parse(raw)}catch(e){return false}
+  Object.keys(o).forEach(function(k){if(k==='_step')return;var els=form.elements[k];if(!els)return;
+    if(els.length&&els[0]&&els[0].type==='radio'){[].forEach.call(els,function(r){r.checked=r.value===o[k]})}else if(els.type!=='hidden'){els.value=o[k]}});
+  var s=parseInt(o._step,10);if(s>1&&s<=TOTAL){show(s);return true}return false;
+}
+function show(n){
+  cur=n;steps.forEach(function(f){f.hidden=+f.dataset.step!==n});
+  back.hidden=n===1;
+  next.firstChild.nodeValue=n===TOTAL?'Garantir minha vaga':'Continuar';
+  prog.style.setProperty('--p',(n/TOTAL).toFixed(3));
+  progT.textContent='Pergunta '+n+' de '+TOTAL;
+  var f=steps[n-1],first=f.querySelector('input:checked')||f.querySelector('input:not([type=hidden]),textarea');
+  if(first&&dlg.open)setTimeout(function(){first.focus({preventScroll:true})},30);
+}
+function err(n,msg){var e=steps[n-1].querySelector('.err');if(e)e.textContent=msg||''}
+function valid(n){
+  var f=steps[n-1];err(n,'');
+  var nome=f.querySelector('input[name=nome]');
+  if(nome){var ok=nome.value.trim().length>=2;nome.setAttribute('aria-invalid',!ok);if(!ok){err(n,'Escreva seu nome.');nome.focus()}return ok}
+  var wa=f.querySelector('input[name=whatsapp]');
+  if(wa){var dig=wa.value.replace(/\D/g,'');var ok2=dig.length>=10&&dig.length<=13;wa.setAttribute('aria-invalid',!ok2);if(!ok2){err(n,'Confira o WhatsApp: DDD + número.');wa.focus()}return ok2}
+  var ta=f.querySelector('textarea[required]');
+  if(ta){var ok4=ta.value.trim().length>=5;ta.setAttribute('aria-invalid',!ok4);if(!ok4){err(n,'Conte um pouco sobre você e sua agência.');ta.focus()}return ok4}
+  if(!f.querySelector('input[type=radio]'))return true;
+  var r=f.querySelector('input[type=radio]:checked');if(!r){err(n,'Escolha uma opção.');var a=f.querySelector('input[type=radio]');if(a)a.focus()}return !!r;
+}
+function go(){if(!valid(cur))return;if(cur<TOTAL){track('EtapaAplicacao',{etapa:cur});if(steps[cur-1].querySelector('input[name=whatsapp]'))parcial();show(cur+1);save()}else submit()}
+next.addEventListener('click',go);
+back.addEventListener('click',function(){if(cur>1){show(cur-1);save()}});
+form.addEventListener('submit',function(e){e.preventDefault();go()});
+form.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();go()}});
+form.addEventListener('change',function(e){save();if(e.target.type==='radio'&&porPonteiro&&!e.target.closest('fieldset').querySelector('textarea')){setTimeout(function(){if(+e.target.closest('fieldset').dataset.step===cur)go()},180)}});
+var waIn=form.elements.whatsapp;if(waIn)waIn.addEventListener('input',function(e){
+  var v=e.target.value.replace(/\D/g,'').slice(0,11);
+  e.target.value=v.length>10?'('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7):v.length>6?'('+v.slice(0,2)+') '+v.slice(2,6)+'-'+v.slice(6):v.length>2?'('+v.slice(0,2)+') '+v.slice(2):v;
+});
+
+function score(){var s=0;form.querySelectorAll('input[type=radio]:checked').forEach(function(r){s+=+r.dataset.s||0});return s}
+/* ⚙️ QUALIFICAÇÃO: decide quem vira LeadQualificado e a temperatura para o SDR priorizar */
+function qualifica(o,s){
+  var apto=o.faturamento!=='ate-6k'&&o.perfil!=='func'&&o.perfil!=='comecando';
+  var qual=apto&&s>=CONFIG.NOTA_CORTE;
+  var temp=!apto?'fora-do-perfil':(qual&&o.momento==='agora')?'quente':qual?'morno':'frio';
+  return {qual:qual,temp:temp};
+}
+function cookie(n){var m=d.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
+/* dados para a CAPI casar o lead com o clique do anúncio */
+function capi(o){o.fbp=cookie('_fbp');var fbclid=o.fbclid||get('s','fbclid');o.fbc=cookie('_fbc')||(fbclid?'fb.1.'+Date.now()+'.'+fbclid:'');o.user_agent=navigator.userAgent;return o}
+var LEAD_ID=get('l',KEY+'_id')||uid();set('l',KEY+'_id',LEAD_ID);
+/* contato salvo assim que o WhatsApp é preenchido: se a pessoa abandonar, o time ainda pode chamar */
+var parcialEnviado=false;
+function parcial(){
+  if(parcialEnviado||!CONFIG.WEBHOOK_URL)return;parcialEnviado=true;
+  var o=vals();if(o.empresa_site)return;delete o.empresa_site;
+  UTM.forEach(function(k){if(!o[k])o[k]=get('s',k)||''});
+  o.status='parcial';o.variante=CONFIG.VARIANTE;o.lead_id=LEAD_ID;o.titulo=q.get('h')||'padrao';o.pagina=location.href.split('#')[0];o.data=new Date().toISOString();capi(o);
+  try{fetch(CONFIG.WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(Object.assign({telefone:o.whatsapp},o)),keepalive:true}).catch(function(){})}catch(e){}
+  track('InicioCadastro',{content_name:'aula-ao-vivo'});
+}
+function waLink(o){
+  var lines=['Olá! Vim pela página da aula ao vivo da FULLX (B).',''];
+  Object.keys(o).forEach(function(k){if(/^(utm_|fbclid|fbp|fbc|user_agent|lead_id|status|variante|temperatura|event_id|pagina|data|pontuacao|qualificado|origem_botao|titulo|telefone|mensagem|_)/.test(k))return;if(o[k])lines.push(k.charAt(0).toUpperCase()+k.slice(1)+': '+o[k])});
+  return 'https://wa.me/'+CONFIG.WHATSAPP+'?text='+encodeURIComponent(lines.join('\n'));
+}
+function uid(){try{return crypto.randomUUID()}catch(e){return Date.now().toString(36)+Math.random().toString(36).slice(2)}}
+function finish(el){navf.hidden=true;steps.forEach(function(f){f.hidden=true});form.querySelector('.privacy').hidden=true;el.hidden=false;prog.style.setProperty('--p',1);progT.textContent='Concluído';el.focus()}
+
+function submit(){
+  var o=vals();
+  if(o.empresa_site){sent=true;finish(done);return}
+  delete o.empresa_site;
+  UTM.forEach(function(k){if(!o[k])o[k]=get('s',k)||''});
+  var s=score(),qq=qualifica(o,s),qual=qq.qual,id=uid();
+  o.status='completo';o.variante=CONFIG.VARIANTE;o.lead_id=LEAD_ID;o.temperatura=qq.temp;capi(o);
+  o.pontuacao=s;o.qualificado=qual;o.event_id=id;o.origem_botao=pos;o.titulo=q.get('h')||'padrao';o.pagina=location.href.split('#')[0];o.data=new Date().toISOString();
+  var link=waLink(o);d.getElementById('done-wa').href=link;d.getElementById('fail-wa').href=link;
+  d.getElementById('done-wa').onclick=d.getElementById('fail-wa').onclick=function(){track('CliqueWhatsApp',{origem:'formulario'})};
+  var grp=d.getElementById('done-grupo');
+  if(CONFIG.GRUPO_URL){
+    grp.href=CONFIG.GRUPO_URL;grp.hidden=false;grp.onclick=function(){track('EntrouGrupo',{origem:'formulario'})};
+    d.getElementById('done-p').textContent='Último passo: entre no grupo do WhatsApp. É lá que chegam o link da aula e o lembrete.';
+    d.getElementById('done-wa').hidden=!!CONFIG.WEBHOOK_URL;
+  }
+  /* lead quente: ganha um atalho para falar com o time antes da aula */
+  if(qq.temp==='quente'&&CONFIG.WEBHOOK_URL){var dw=d.getElementById('done-wa');dw.hidden=false;dw.setAttribute('data-solo','');dw.lastChild.nodeValue='Falar com o time agora';
+    d.getElementById('done-p').textContent='Sua vaga está garantida. Entre no grupo da aula. Pelo seu perfil, se quiser, já pode conversar com o time hoje.'}
+  if(!CONFIG.WEBHOOK_URL){
+    sent=true;del('l',KEY);
+    d.getElementById('done-p').textContent=CONFIG.GRUPO_URL?'Falta um passo: entre no grupo da aula e mande suas respostas pelo WhatsApp (já vão preenchidas).':'Falta um passo: toque no botão abaixo para mandar suas respostas pelo WhatsApp.';
+    d.getElementById('done-wa').lastChild.nodeValue='Mandar respostas pelo WhatsApp';
+    d.getElementById('done-wa').setAttribute('data-solo','');
+    finish(done);return;
+  }
+  next.disabled=true;
+  /* telefone/mensagem: mesmos nomes do modelo da planilha, para o Apps Script achar os campos */
+  fetch(CONFIG.WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(Object.assign({telefone:o.whatsapp,mensagem:o.sobre},o)),keepalive:true})
+    .then(function(){
+      sent=true;del('l',KEY);del('l',KEY+'_id');
+      track('Lead',{content_name:'aula-ao-vivo',value:s,variante:CONFIG.VARIANTE},id);
+      if(qual)track('LeadQualificado',{pontuacao:s,faturamento:o.faturamento,temperatura:qq.temp,variante:CONFIG.VARIANTE},'q-'+id);
+      finish(done);
+    })
+    .catch(function(){finish(fail)})
+    .then(function(){next.disabled=false});
+}
+
+d.querySelectorAll('.js-open').forEach(function(b){b.addEventListener('click',function(){
+  pos=b.dataset.pos||'';
+  if(sent){dlg.showModal();return}
+  var retomou=!started&&restore();started=true;
+  if(!retomou&&cur===1)show(1);
+  dlg.showModal();show(cur);
+  track(retomou?'RetomouFormulario':'AbriuFormulario',{origem:pos});
+})});
+d.getElementById('dlg-close').addEventListener('click',function(){dlg.close()});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+dlg.addEventListener('close',function(){if(!sent&&cur>1)track('AbandonouFormulario',{etapa:cur})});
+})();
+</script>
+</body>
+</html>
+
+
+
