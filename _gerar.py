@@ -8,9 +8,30 @@ PAGINAS = ['p01_institucional', 'p01b_blog', 'p01c_blog_artigo', 'p02_form_calen
 for m in PAGINAS: importlib.import_module(f'paginas.{m}')
 
 import re as _re
+# ───────────── publicação por caminho em fullxmarketing.com ─────────────
+DOMINIO = 'https://www.fullxmarketing.com'
+SLUGS = {'00-modelos.html': 'modelos', '01-institucional.html': 'institucional', '01b-blog.html': 'conteudos',
+         '01c-blog-artigo.html': 'conteudos/4-funis-agenda-comercial', '02-form-calendly.html': 'diagnostico',
+         '03-vsl-qualificacao.html': 'assista', '04-vsl-form-calendly.html': 'mentoria', '05-aplicacao.html': 'aplicacao',
+         '06-playbook-ebook.html': 'playbook', '07-playbook-curso.html': 'curso', '08-backredirect.html': 'espera',
+         '09-software-whitelabel.html': 'white-label'}
+NOINDEX = {'modelos', 'espera'}   # índice interno e página de saída não entram no Google
+DIST = OUT / 'dist'
+
 def _setas(html):
     # seta animada nos CTAs principais (só links grandes, sem ícone próprio)
     return _re.sub(r'(<a class="btn btn-primary btn-m"[^>]*>)([^<]+)</a>', lambda m: m.group(1) + m.group(2) + go_ic() + '</a>', html)
+
+def _links(html, slug):
+    # links internos NN-nome.html → /slug/ (mantém #âncora); canônico e domínio antigo → fullxmarketing.com
+    html = _re.sub(r'href="(0\d[a-z]?-[a-z-]+\.html)(#[^"]*)?"', lambda m: f'href="/{SLUGS[m.group(1)]}/{m.group(2) or ""}"', html)
+    html = _re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{DOMINIO}/{slug}/">', html)
+    html = html.replace('https://grupofull10x.com/espera', f'{DOMINIO}/espera/').replace('https://grupofull10x.com', DOMINIO)
+    if slug in NOINDEX: html = html.replace('<meta name="description"', '<meta name="robots" content="noindex,nofollow">\n<meta name="description"', 1)
+    return html
+
 for name, html in pages.items():
-    (OUT / name).write_text(_setas(html), encoding='utf-8')
-print(len(pages), 'páginas')
+    slug = SLUGS[name]
+    d = DIST / slug; d.mkdir(parents=True, exist_ok=True)
+    (d / 'index.html').write_text(_links(_setas(html), slug), encoding='utf-8')
+print(len(pages), 'páginas em', DIST)

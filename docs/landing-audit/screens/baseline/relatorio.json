@@ -1,0 +1,130 @@
+{
+  "aplicacao": {
+    "console": [],
+    "overflow": [],
+    "todo": 3,
+    "placeholders": [
+      "[XX]",
+      "[+XXX clientes atendidos]"
+    ],
+    "brokenLinks": [],
+    "lcp": 301
+  },
+  "assista": {
+    "console": [],
+    "overflow": [],
+    "todo": 5,
+    "placeholders": [
+      "[PONTO DO VÍDEO]"
+    ],
+    "brokenLinks": [],
+    "lcp": 295
+  },
+  "conteudos": {
+    "console": [],
+    "overflow": [],
+    "todo": 1,
+    "placeholders": [
+      "[RAZÃO SOCIAL · CNPJ]"
+    ],
+    "brokenLinks": [],
+    "lcp": 243
+  },
+  "curso": {
+    "console": [],
+    "overflow": [],
+    "todo": 0,
+    "placeholders": [],
+    "brokenLinks": [],
+    "lcp": 219
+  },
+  "diagnostico": {
+    "console": [],
+    "overflow": [],
+    "todo": 1,
+    "placeholders": [],
+    "brokenLinks": [],
+    "lcp": 240
+  },
+  "espera": {
+    "console": [],
+    "overflow": [],
+    "todo": 0,
+    "placeholders": [],
+    "brokenLinks": [],
+    "lcp": 292
+  },
+  "institucional": {
+    "console": [],
+    "overflow": [],
+    "todo": 13,
+    "placeholders": [
+      "[+XXX clientes atendidos]",
+      "[XXX]",
+      "[X anos]",
+      "[RAZÃO SOCIAL · CNPJ]"
+    ],
+    "brokenLinks": [],
+    "lcp": 254
+  },
+  "mentoria": {
+    "console": [],
+    "overflow": [],
+    "todo": 3,
+    "placeholders": [
+      "[+XXX clientes atendidos]"
+    ],
+    "brokenLinks": [],
+    "lcp": 236
+  },
+  "modelos": {
+    "console": [],
+    "overflow": [],
+    "todo": 0,
+    "placeholders": [],
+    "brokenLinks": [],
+    "lcp": 237
+  },
+  "playbook": {
+    "console": [],
+    "overflow": [],
+    "todo": 2,
+    "placeholders": [
+      "[TÍTULO DO EBOOK]",
+      "[XX]"
+    ],
+    "brokenLinks": [],
+    "lcp": 242
+  },
+  "white-label": {
+    "console": [],
+    "overflow": [],
+    "todo": 8,
+    "placeholders": [
+      "[R$X]",
+      "[10]",
+      "[50]",
+      "[Sob consulta]",
+      "[RAZÃO SOCIAL · CNPJ]"
+    ],
+    "brokenLinks": [],
+    "lcp": 272
+  },
+  "conteudos/4-funis-agenda-comercial": {
+    "console": [],
+    "overflow": [],
+    "todo": 10,
+    "placeholders": [
+      "[DD/MM/AAAA]",
+      "[AUTOR]",
+      "[1 PARÁGRAFO COM A IDEIA CENTRAL DO CONTEÚDO]",
+      "[TEXTO]",
+      "[PONTO 1]",
+      "[PONTO 2]",
+      "[PONTO 3]",
+      "[RAZÃO SOCIAL · CNPJ]"
+    ],
+    "brokenLinks": [],
+    "lcp": 258
+  }
+}
