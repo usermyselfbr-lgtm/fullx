@@ -3,9 +3,7 @@ Cada página gerada é um HTML único (CSS e JS embutidos), pronto para publicar
 import re, math
 
 # ───────────────────────── LOGO (símbolo acetinado + palavra original) ─────────────────────────
-_o = open(__import__('pathlib').Path(__file__).with_name('index.html'), encoding='utf-8').read()
-_old = re.findall(r'<svg class="logo".*?</svg>', _o, re.S)[0]
-WORD = re.search(r'<g transform="translate\(184 118\.75\) scale\(1\.25\)"><path d="([^"]+)"', _old).group(1)
+from _logo import WORD
 _C = 256; _X0, _X1 = 60, 452; _T = 86; _GAP = 12; _BACK, _FRONT = -30, 24
 
 def _poly(th):
