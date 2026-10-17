@@ -13,8 +13,8 @@ Estados: PENDENTE · EM ANÁLISE · EM IMPLEMENTAÇÃO · EM TESTE · CONCLUÍDA
 | 02 diagnostico | CONCLUÍDA | `paginas/02-diagnostico.md` |
 | 06 playbook | CONCLUÍDA | `paginas/06-playbook.md` |
 | 07 curso | CONCLUÍDA | `paginas/07-curso.md` |
-| 01b conteudos | EM IMPLEMENTAÇÃO | `paginas/01b-conteudos.md` |
-| 01c artigo | EM IMPLEMENTAÇÃO | `paginas/01c-artigo.md` |
+| 01b conteudos | CONCLUÍDA | `paginas/01b-conteudos.md` |
+| 01c artigo | CONCLUÍDA | `paginas/01c-artigo.md` |
 | 08 espera | CONCLUÍDA | `paginas/08-espera.md` |
 | 00 modelos | CONCLUÍDA | `paginas/00-modelos.md` |
 
