@@ -67,18 +67,17 @@ SOFT = [('crm', 'CRM', 'Pipeline comercial de agência, com etapas, tarefas e hi
         ('chat', 'IA comercial', 'Qualifica, responde e agenda leads no WhatsApp enquanto o time dorme.', ['Primeiro contato em segundos', 'Qualificação por perguntas', 'Agendamento direto na agenda'])]
 soft_cards = bento(SOFT)
 
-POSTS = [('aulas', 'Aula gratuita', 'Os 4 funis que enchem a agenda comercial de uma agência', 'Como atrair, filtrar e fechar sem depender de indicação.', '42 min'),
-         ('playbooks', 'Playbook', 'Playbook: formulário que qualifica lead antes da call', 'Perguntas, pontuação e nota de corte prontas para copiar.', 'PDF · 18 páginas'),
-         ('artigos', 'Artigo', 'Por que sua agência perde cliente no terceiro mês', 'Os 3 pontos da entrega que derrubam a retenção.', '7 min de leitura'),
-         ('aulas', 'Aula gratuita', 'Roteiro de call: como outra pessoa fecha no seu lugar', 'A estrutura da call que o SDR e o closer seguem.', '35 min'),
-         ('playbooks', 'Playbook', 'Régua de cobrança para agência: modelo pronto', 'Mensagens, prazos e o que fazer no atraso.', 'PDF · 12 páginas'),
-         ('artigos', 'Artigo', 'CPL baixo não paga boleto: as métricas que importam', 'Da campanha à venda: o que acompanhar toda semana.', '6 min de leitura')]
+# (categoria, selo, título, descrição, meta, link). Só conteúdo que existe. O artigo fica por último: a página dele mostra os 3 primeiros em "Continue lendo".
+POSTS = [('aulas', 'Aula ao vivo', 'Os 4 canos da agência, abertos na tela', 'Anúncio, formulário que pontua, CRM, roteiro e cobrança, na operação real. Gratuita, no Google Meet.', '25/10 · 14h', 'https://www.fullxmarketing.com/'),
+         ('playbooks', 'Playbook', 'Playbook Full10X: mais clientes e receita', 'Da oferta ao cliente que renova, com plano de 6 semanas para implantar.', 'PDF · 147 páginas', '06-playbook-ebook.html'),
+         ('aulas', 'Aulas gratuitas', 'O sistema Full10X em 5 aulas curtas', 'Em gravação. Cadastre-se e receba cada aula quando ela sair.', 'Cadastro gratuito', '07-playbook-curso.html'),
+         ('artigos', 'Artigo', 'Os 4 funis que enchem a agenda comercial de uma agência', 'Atrair, filtrar, fechar e sustentar, com a tabela de pontuação do formulário.', '7 min de leitura', '01c-blog-artigo.html')]
 TH_ART = {'aulas': lambda: f'<span class="th-play">{ic("play")}</span>',
           'playbooks': lambda: '<span class="th-doc"><i></i><i></i><i></i><i></i><i></i><i></i></span>',
           'artigos': lambda: '<span class="th-lines"><i></i><i></i><i></i><i></i></span>'}
 TH_IC = {'aulas': 'video', 'playbooks': 'file', 'artigos': 'clock'}
 def post_cards(n=6, uid='p'):
     # 🖼️ MÍDIA: para usar capa real, troque o conteúdo de <div class="th"> por <img src="..." alt="" width="640" height="360">
-    return ''.join(f'''<a class="post reveal" href="01c-blog-artigo.html" data-cat="{c}"><div class="th"><span class="t">{tag}</span>{TH_ART[c]()}{mark(f"{uid}{i}", size=26)}</div>
-<div class="bd"><h3>{t}</h3><p>{d}</p><span class="meta"><span>{ic(TH_IC[c])}{m}</span><span class="go">{ic("arrow")}</span></span></div></a>''' for i, (c, tag, t, d, m) in enumerate(POSTS[:n]))
+    return ''.join(f'''<a class="post reveal" href="{href}" data-cat="{c}"><div class="th"><span class="t">{tag}</span>{TH_ART[c]()}{mark(f"{uid}{i}", size=26)}</div>
+<div class="bd"><h3>{t}</h3><p>{d}</p><span class="meta"><span>{ic(TH_IC[c])}{m}</span><span class="go">{ic("arrow")}</span></span></div></a>''' for i, (c, tag, t, d, m, href) in enumerate(POSTS[:n]))
 VSL = lambda key='VIDEO_URL': f'''<div class="video" data-embed-key="{key}"><div class="ph"><span class="play">{ic("play")}</span><span>🖼️ Vídeo de vendas. Configure {key} no topo do arquivo.</span></div></div>'''
