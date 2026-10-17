@@ -7,9 +7,9 @@ Estados: PENDENTE · EM ANÁLISE · EM IMPLEMENTAÇÃO · EM TESTE · CONCLUÍDA
 | Sistema compartilhado (`_sistema.py`, `_comum.py`) | EM IMPLEMENTAÇÃO | `SISTEMA.md` |
 | 01 institucional | CONCLUÍDA | `paginas/01-institucional.md` |
 | 09 white-label | CONCLUÍDA | `paginas/09-white-label.md` |
-| 05 aplicacao | EM IMPLEMENTAÇÃO | `paginas/05-aplicacao.md` |
-| 04 mentoria | EM IMPLEMENTAÇÃO | `paginas/04-mentoria.md` |
-| 03 assista | EM IMPLEMENTAÇÃO | `paginas/03-assista.md` |
+| 05 aplicacao | CONCLUÍDA | `paginas/05-aplicacao.md` |
+| 04 mentoria | CONCLUÍDA | `paginas/04-mentoria.md` |
+| 03 assista | CONCLUÍDA | `paginas/03-assista.md` |
 | 02 diagnostico | CONCLUÍDA | `paginas/02-diagnostico.md` |
 | 06 playbook | CONCLUÍDA | `paginas/06-playbook.md` |
 | 07 curso | CONCLUÍDA | `paginas/07-curso.md` |
