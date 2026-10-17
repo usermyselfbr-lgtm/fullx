@@ -28,4 +28,7 @@ for name, html in pages.items():
     slug = SLUGS[name]
     d = DIST / slug; d.mkdir(parents=True, exist_ok=True)
     (d / 'index.html').write_text(_links(_setas(html), slug), encoding='utf-8')
+# arquivos estáticos (PDFs, imagens) em static/<slug>/… vão junto para dist/
+import shutil as _sh
+if (OUT / 'static').is_dir(): _sh.copytree(OUT / 'static', DIST, dirs_exist_ok=True)
 print(len(pages), 'páginas em', DIST)

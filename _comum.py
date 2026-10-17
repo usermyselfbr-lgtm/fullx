@@ -47,16 +47,16 @@ def form_card(funil, title, steps_html, final, done_ok, done_nok='', corte=None,
 OK = lambda t, p, extra='': f'<div class="ok">{ic("check")}</div><h3>{t}</h3><p>{p}</p>{extra}'
 NOK = lambda: f'<div class="done" data-done="nok" hidden><div class="ok">{ic("check")}</div><h3>Recebemos sua aplicação.</h3><p>Pelo seu momento, o melhor próximo passo é o conteúdo gratuito. Separamos o playbook para você começar hoje.</p><a class="btn btn-primary on-light" href="06-playbook-ebook.html">Baixar o playbook grátis</a></div>'
 
-PROOF = f'<div class="proof-line"><span>{ic("check")}+R$10 milhões em tráfego gerenciado</span><span>{ic("check")}<span class="todo">[+XXX clientes atendidos]</span></span><span>{ic("check")}Sistemas próprios de CRM e cobrança</span></div>'
+PROOF = f'<div class="proof-line"><span>{ic("check")}+R$10 milhões em tráfego gerenciado</span><span>{ic("check")}+2.300 clientes de serviço gerados</span><span>{ic("check")}CRM e cobrança próprios, rodando na nossa agência</span></div>'
 
 def mbar(label, go='#form'):
     return f'<div class="mbar"><a class="btn btn-primary" href="{go}" data-go="{go}" data-pos="barra-celular">{label}</a></div>'
 
-FAQ_BASE = [('Para quem é?', 'Para donos de agência e gestores de tráfego que já têm clientes e querem previsibilidade de venda e operação.'),
-            ('O que eu recebo exatamente?', '<span class="todo">[DESCREVA A ENTREGA DESTE FUNIL EM 2 FRASES]</span>'),
-            ('E se o meu caso for diferente?', 'O sistema é de captação, comercial e operação de agência. Funciona para qualquer nicho que vende serviço recorrente.'),
-            ('Por que a Full10X?', 'Porque tudo o que ensinamos e vendemos roda primeiro na nossa operação: tráfego, CRM, cobrança e IA.'),
-            ('Como eu começo?', 'Preencha o formulário desta página. O próximo passo aparece na hora.')]
+FAQ_BASE = [('Para quem é?', 'Para donos de agência e gestores de tráfego que já têm clientes pagando e querem parar de recomeçar o mês do zero.'),
+            ('Isso é curso?', 'Não. É o sistema que roda na nossa própria agência: anúncio, formulário que pontua o lead, CRM, roteiro de venda e cobrança, ligados entre si. Você vê a tela, não a teoria.'),
+            ('E se o meu nicho for diferente?', 'O sistema é de captação, comercial e operação de agência. Serve para quem vende serviço recorrente, seja qual for o nicho do cliente.'),
+            ('Por que a Full10X?', 'Porque tudo o que mostramos roda primeiro na nossa operação, com +R$10 milhões gerenciados em tráfego e CRM e cobrança construídos para ela.'),
+            ('Como eu começo?', 'Preencha o formulário desta página. O próximo passo aparece na hora, de acordo com as suas respostas.')]
 
 pages = {}
 
