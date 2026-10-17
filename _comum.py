@@ -40,7 +40,7 @@ def form_card(funil, title, steps_html, final, done_ok, done_nok='', corte=None,
     {privacy()}
     <div class="done" data-done="ok" hidden>{done_ok}</div>
     {nok}
-    <div class="done" data-done="fail" hidden><h3>Não conseguimos registrar.</h3><p>A conexão falhou. Fale com o time pelo WhatsApp.</p><a class="btn btn-primary on-light" data-wa href="#" target="_blank" rel="noopener">{ic("whats")}Falar pelo WhatsApp</a></div>
+    <div class="done" data-done="fail" hidden><h3>Não conseguimos registrar.</h3><p>A conexão falhou. Suas respostas continuam aqui: tente de novo em alguns segundos.</p><button type="button" class="btn btn-primary on-light" data-retry>Tentar de novo</button><a class="btn btn-ghost" style="width:100%;margin-top:10px" data-wa href="#" target="_blank" rel="noopener noreferrer" hidden>{ic("whats")}Ou fale pelo WhatsApp</a></div>
   </form>
 </div>'''
 

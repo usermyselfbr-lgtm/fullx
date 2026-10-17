@@ -20,6 +20,7 @@ def _links(html, slug):
     # links internos NN-nome.html → /slug/ (mantém #âncora); canônico e domínio antigo → fullxmarketing.com
     html = _re.sub(r'href="(0\d[a-z]?-[a-z-]+\.html)(#[^"]*)?"', lambda m: f'href="/{SLUGS[m.group(1)]}/{m.group(2) or ""}"', html)
     html = _re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{DOMINIO}/{slug}/">', html)
+    html = _re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{DOMINIO}/{slug}/">', html)
     html = html.replace('https://grupofull10x.com/espera', f'{DOMINIO}/espera/').replace('https://grupofull10x.com', DOMINIO)
     if slug in NOINDEX: html = html.replace('<meta name="description"', '<meta name="robots" content="noindex,nofollow">\n<meta name="description"', 1)
     return html

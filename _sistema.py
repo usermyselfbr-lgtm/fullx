@@ -29,7 +29,7 @@ def logo(uid, tone='dark', h=30):
     ink = _SAT[tone][2]
     return (f'<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 150" height="{h}" width="{round(h*590/150)}" role="img" aria-label="Full10X">'
             f'<g transform="scale({150/512:.6f})">{symbol(uid, tone)}</g>'
-            f'<g transform="translate(182 118.75) scale(1.25)"><path d="{WORD}" fill="{ink}"/></g></svg>')
+            f'<g transform="translate(182 118.75) scale(1.25)"><use href="#fx-word" fill="{ink}"/></g></svg>')   # o traçado da palavra fica uma vez só, em ICONS
 
 def mark(uid, tone='dark', size=40):
     return f'<svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="{size}" height="{size}" aria-hidden="true">{symbol(uid, tone)}</svg>'
@@ -106,7 +106,6 @@ h3{font-size:clamp(1.1rem,1.04rem + .3vw,1.25rem);line-height:1.3;letter-spacing
   --tx:#0b1120;--tx-2:#475166;--tx-3:#5c667a;--line:#0b112012;--line-2:#0b11201f;--line-3:#0b11202e;--accent:#2a5bc4;
   --title:linear-gradient(180deg,#0b1120 40%,#2b3650 100%);--edge:linear-gradient(180deg,#0b11201f,#0b112010)}
 .light.mist{background:var(--mist)}
-.light.grid-bg{background-image:linear-gradient(#0b11200a 1px,transparent 1px),linear-gradient(90deg,#0b11200a 1px,transparent 1px);background-size:56px 56px;background-position:center -1px}
 
 /* ── botões ── */
 .btn{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:var(--r-s);border:0;cursor:pointer;
@@ -140,6 +139,7 @@ h3{font-size:clamp(1.1rem,1.04rem + .3vw,1.25rem);line-height:1.3;letter-spacing
 .top.scrolled{border-bottom-color:var(--line-2);background:#03050bd9}
 .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
 .top .logo{width:auto;height:26px}
+.top-in>a:first-child{display:inline-flex;align-items:center;min-height:44px}
 .nav{display:flex;align-items:center;gap:2px;padding:4px;border-radius:999px;background:#ffffff05;box-shadow:inset 0 0 0 1px var(--line)}
 .nav a{padding:8px 14px;border-radius:999px;font-size:.92rem;color:var(--tx-2);min-height:36px;display:inline-flex;align-items:center;transition:color .15s,background-color .15s}
 .nav a:hover{color:var(--tx);background:#ffffff0d}
@@ -236,7 +236,7 @@ h3{font-size:clamp(1.1rem,1.04rem + .3vw,1.25rem);line-height:1.3;letter-spacing
 
 /* ── bento de produtos ── */
 .bento{display:grid;gap:16px}
-@media(min-width:900px){.bento{grid-template-columns:repeat(6,1fr)}.bento .w4{grid-column:span 4}.bento .w2{grid-column:span 2}.bento .w3{grid-column:span 3}}
+@media(min-width:900px){.bento{grid-template-columns:repeat(6,1fr)}.bento .w4{grid-column:span 4}.bento .w2{grid-column:span 2}}
 .tile{position:relative;isolation:isolate;display:flex;flex-direction:column;border-radius:var(--r-l);padding:26px 24px 0;overflow:hidden;
   background:linear-gradient(180deg,#0c1324,#070b16) padding-box,var(--edge) border-box;border:1px solid transparent;
   box-shadow:0 30px 60px -36px #000;transition:transform .4s var(--expo)}
@@ -301,7 +301,6 @@ a.card:hover{transform:translateY(-3px)}
 .card li::before{content:"";flex:none;width:6px;height:6px;margin-top:9px;border-radius:50%;background:var(--accent)}
 .card .more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:.92rem;font-weight:500;color:var(--tx);min-height:44px}
 .card .more .ic{transition:transform .2s var(--expo)}.card:hover .more .ic{transform:translateX(3px)}
-.float{}
 
 /* ── linha do tempo / passos ── */
 .steps{list-style:none;display:grid;gap:0;position:relative}
@@ -375,7 +374,7 @@ legend{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,1.18rem
 .fld input:hover,.fld textarea:hover,.fld select:hover{box-shadow:inset 0 0 0 1px #0b112047,0 1px 2px #0b11200a}
 .fld input,.fld select{min-height:52px}
 .fld textarea{min-height:112px;padding:12px 14px;line-height:1.45;resize:vertical}
-.fld input::placeholder,.fld textarea::placeholder{color:#7d8698}
+.fld input::placeholder,.fld textarea::placeholder{color:#6b7589}
 .fld input:focus,.fld textarea:focus,.fld select:focus{outline:none;box-shadow:inset 0 0 0 1.5px var(--accent),0 0 0 4px #2a5bc41f}
 .fld [aria-invalid="true"],[aria-invalid="true"]{box-shadow:inset 0 0 0 1.5px #c4320a,0 0 0 4px #c4320a14!important}
 .muted{color:var(--tx-3);font-weight:400}
@@ -396,8 +395,9 @@ legend{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,1.18rem
 .done h3{font-family:var(--display);font-size:1.55rem;letter-spacing:-.03em}
 .done p{margin:10px auto 20px;max-width:42ch}
 .done .btn{width:100%}
-.cal{margin-top:14px;min-height:660px;border-radius:var(--r);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
-.cal-ph{display:grid;place-items:center;min-height:300px;padding:24px;text-align:center;font-size:.95rem;color:var(--tx-3);background:#f6f8fb;border-radius:var(--r)}
+.cal{margin-top:14px;min-height:680px;border-radius:var(--r);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.cal-ph{display:grid;place-items:center;min-height:120px;margin-top:12px;padding:24px;text-align:center;font-size:.95rem;color:var(--tx-3);background:#f6f8fb;border-radius:var(--r)}
+.cal-txt{margin:10px auto 0;max-width:42ch;color:var(--tx)}
 .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-size:.84rem;color:var(--tx-3)}
 .trust span{display:inline-flex;align-items:center;gap:6px}.trust .ic{width:15px;height:15px;color:var(--accent)}
 
@@ -541,6 +541,10 @@ legend{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,1.18rem
 .mbar.show{transform:none}.mbar .btn{width:100%}
 @media(min-width:900px){.mbar{display:none}}
 @media(max-width:899px){body.has-mbar{padding-bottom:88px}}
+/* toque: alvos de pelo menos 44px onde o desktop usa 36–40 */
+@media(pointer:coarse){.chip,.btn-sm,.foot li a,.crumb{min-height:44px}.legal a,.privacy a,.small a,.mini-foot a{display:inline-flex;align-items:center;min-height:44px}.filters{padding:4px}}
+/* formulário fixo ao lado do vídeo (/mentoria): só em tela larga e alta; senão rola junto */
+@media(max-width:999px),(max-height:760px){.split [data-hero-cta][style*="sticky"]{position:static!important}}
 
 /* ── entrada ── */
 .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .8s var(--expo),transform .8s var(--expo)}
@@ -565,16 +569,16 @@ html.draft [data-draft]{outline:2px dashed #e7c24a;outline-offset:4px}
    Títulos palavra por palavra · onda de brilho · aurora · bordas em feixe · holofote 3D
    cabeçalho que encolhe · barra de leitura · formulário vivo. Sem biblioteca. */
 :root{--display:"Inter Tight","Geist",system-ui,sans-serif;--shine:rgba(222,216,255,.95);--shine-h1:rgba(232,244,255,1)}
-.light,.form-card,dialog,.compare .with{--shine:rgba(96,80,196,.72)}
-.dk,.out,.fit .yes,.missing,.ticket .buy,.plan.hot,.inline-cta,.compare .yes{--shine:rgba(222,216,255,.95)}
+.light,.form-card{--shine:rgba(96,80,196,.72)}
+.plan.hot,.inline-cta,.compare .yes{--shine:rgba(222,216,255,.95)}
 
 /* ── tipografia: Inter Tight 500, bem apertada ── */
-h1,h2,h3,legend,blockquote,.big,.stats b,.price,.kpi b,.creds b,.count b{font-family:var(--display)}
+h1,h2,h3,legend,blockquote,.big,.stats b,.price,.kpi b{font-family:var(--display)}
 h1{font-weight:500;letter-spacing:-.038em}
 h2{font-weight:500;letter-spacing:-.034em}
-.hero h1,.offer .big,.ticket .big{letter-spacing:-.04em}
+.hero h1{letter-spacing:-.04em}
 h3,legend{font-weight:500;letter-spacing:-.025em}
-.stats b,.price,.big,.kpi b,.creds b,.count b,.time .big,.offer .big,.ticket .big,.score-row .big{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.stats b,.price,.big,.kpi b{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 
 /* ── títulos palavra por palavra + onda de brilho ── */
 .fx-split,.fx-title{background:none!important;-webkit-text-fill-color:initial}
@@ -604,17 +608,13 @@ h1.fx-split.in .w:not(.w-raw),h1.fx-title.in .w:not(.mute){--shine:var(--shine-h
 /* ── bordas em feixe girando ── */
 @property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
 @keyframes fxspin{to{--a:360deg}}
-.eyebrow,.live,.date{border:1px solid transparent;box-shadow:0 8px 24px -12px #3b74e866;animation:fxspin 5s linear infinite;
+.eyebrow{border:1px solid transparent;box-shadow:0 8px 24px -12px #3b74e866;animation:fxspin 5s linear infinite;
   background:linear-gradient(#0b1222,#0b1222) padding-box,conic-gradient(from var(--a),rgba(255,255,255,.10) 0 58%,#8fb3f5 72%,#cfc8ff 80%,rgba(255,255,255,.10) 92%) border-box}
 .light .eyebrow{background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--a),rgba(11,17,32,.10) 0 58%,#3b74e8 72%,#7a6be0 80%,rgba(11,17,32,.10) 92%) border-box}
 .plan.hot{animation:fxspin 6s linear infinite,fxlevitate 6s ease-in-out infinite;
   background:linear-gradient(180deg,#0e1730,#060a14) padding-box,conic-gradient(from var(--a),rgba(143,179,245,.25) 0 50%,#8fb3f5 66%,#d6d0ff 76%,rgba(143,179,245,.25) 90%) border-box!important}
 .cta-panel{animation:fxspin 8s linear infinite;
   background:radial-gradient(70% 90% at 50% 0%,#3b74e859,transparent 65%) padding-box,linear-gradient(180deg,#0b1328,#05080f) padding-box,conic-gradient(from var(--a),rgba(255,255,255,.08) 0 55%,#8fb3f5 70%,#cfc8ff 78%,rgba(255,255,255,.08) 90%) border-box}
-.offer{animation:fxspin 8s linear infinite;
-  background:radial-gradient(80% 70% at 50% 0%,#3b74e866,transparent 65%) padding-box,linear-gradient(180deg,#0b1328,#05080f) padding-box,conic-gradient(from var(--a),rgba(255,255,255,.08) 0 55%,#8fb3f5 70%,#cfc8ff 78%,rgba(255,255,255,.08) 90%) border-box}
-.ticket{border:1px solid transparent;animation:fxspin 8s linear infinite;
-  background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--a),rgba(11,17,32,.08) 0 55%,#3b74e8 70%,#7a6be0 78%,rgba(11,17,32,.08) 90%) border-box}
 /* botão principal: feixe só no hover */
 .btn-primary{isolation:isolate}
 .btn-primary::after{content:"";position:absolute;inset:-2px;border-radius:calc(var(--r-s) + 2px);padding:1.5px;pointer-events:none;z-index:1;
@@ -633,9 +633,9 @@ h1.fx-split.in .w:not(.w-raw),h1.fx-title.in .w:not(.mute){--shine:var(--shine-h
 .has-glare{transform-style:preserve-3d}
 .glare{position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:4;opacity:0;transition:opacity .35s var(--ease);mix-blend-mode:screen;
   background:radial-gradient(380px circle at var(--gx,50%) var(--gy,0%),rgba(143,179,245,.18),transparent 60%)}
-.light .glare,.form-card .glare,.post .glare,.plan .glare,.agenda li .glare,.fit>div .glare,.compare .with .glare,.ticket .glare,.quote .glare,.light .card .glare{mix-blend-mode:normal;
+.light .glare,.form-card .glare,.post .glare,.plan .glare,.quote .glare,.light .card .glare{mix-blend-mode:normal;
   background:radial-gradient(380px circle at var(--gx,50%) var(--gy,0%),rgba(59,116,232,.09),transparent 60%)}
-.out .glare,.fit .yes .glare,.missing .glare,.plan.hot .glare,.tile .glare,.glow .card .glare,.app .glare,.screen .glare{mix-blend-mode:screen;
+.plan.hot .glare,.tile .glare,.glow .card .glare,.app .glare{mix-blend-mode:screen;
   background:radial-gradient(380px circle at var(--gx,50%) var(--gy,0%),rgba(143,179,245,.18),transparent 60%)}
 .has-glare:hover>.glare{opacity:1}
 .tilting{transition:transform .12s ease-out!important}
@@ -645,17 +645,16 @@ h1.fx-split.in .w:not(.w-raw),h1.fx-title.in .w:not(.mute){--shine:var(--shine-h
 @media(max-width:520px){.shot .app{--tbase:none}}
 
 /* ── cabeçalho de vidro que encolhe ── */
-.top-in,.nav-in,.bar-in{transition:min-height .35s var(--expo)}
-.top.scrolled .top-in,header.nav.scrolled .nav-in,body>.bar.scrolled .bar-in{min-height:56px}
-.top .logo,.nav .brand .logo,body>.bar .brand .logo{transition:transform .35s var(--expo);transform-origin:left center}
-.top.scrolled .logo,header.nav.scrolled .brand .logo,body>.bar.scrolled .brand .logo{transform:scale(.9)}
-header.nav.scrolled,body>.bar.scrolled{background:#03050bd9;border-bottom-color:var(--line-2)}
+.top-in{transition:min-height .35s var(--expo)}
+.top.scrolled .top-in{min-height:56px}
+.top .logo{transition:transform .35s var(--expo);transform-origin:left center}
+.top.scrolled .logo{transform:scale(.9)}
 
 /* ── links com sublinhado animado ── */
-.nav a,.foot li a,.foot-in>a,.mini-foot a,.small a,.crumb,.legal a,.card .more,.tile .more{
+.nav a,.foot li a,.mini-foot a,.small a,.crumb,.legal a,.card .more,.tile .more{
   background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:0 calc(100% - 4px);background-size:0 1px;transition:background-size .35s var(--expo),color .15s}
 .nav a{background-position:14px calc(100% - 6px)}
-.nav a:hover,.foot li a:hover,.foot-in>a:hover,.mini-foot a:hover,.small a:hover,.crumb:hover,.legal a:hover,.card:hover .more,.tile:hover .more{background-size:calc(100% - 0px) 1px}
+.nav a:hover,.foot li a:hover,.mini-foot a:hover,.small a:hover,.crumb:hover,.legal a:hover,.card:hover .more,.tile:hover .more{background-size:calc(100% - 0px) 1px}
 .nav a:hover{background-color:transparent;background-size:calc(100% - 28px) 1px}
 .small a{text-decoration:none}
 @media(max-width:900px){.nav a{background-position:14px calc(100% - 10px)}}
@@ -688,18 +687,17 @@ header.nav.scrolled,body>.bar.scrolled{background:#03050bd9;border-bottom-color:
 
 /* ── animações de entrada com estado final no CSS (permite o holofote mover o elemento) ── */
 .shot .app{animation-fill-mode:backwards!important}
-.screen{animation-fill-mode:backwards!important}
 
 /* ── movimento reduzido: tudo aparece direto, nada gira ── */
 @media(prefers-reduced-motion:reduce){
   .fx-split .w,.fx-title .w{opacity:1!important;transform:none!important;filter:none!important;animation:none!important;transition:none!important}
-  .glow::before,.eyebrow,.live,.date,.plan,.plan.hot,.cta-panel,.offer,.ticket,.video,.btn-primary::after{animation:none!important}
+  .glow::before,.eyebrow,.plan,.plan.hot,.cta-panel,.video,.btn-primary::after{animation:none!important}
   .js .reveal{filter:none!important}
   .readbar{display:none}
   .opt:hover{transform:none}
 }
-.hero .eyebrow,.hero .date{animation:rise .9s var(--expo) both,fxspin 5s linear infinite}
-@media(prefers-reduced-motion:reduce){.hero .eyebrow,.hero .date{animation:none!important}}
+.hero .eyebrow{animation:rise .9s var(--expo) both,fxspin 5s linear infinite}
+@media(prefers-reduced-motion:reduce){.hero .eyebrow{animation:none!important}}
 
 .cta-panel .cta-row{justify-content:center}
 '''
@@ -743,6 +741,8 @@ ICONS = ICONS.replace('</svg>', '''<symbol id="i-search" viewBox="0 0 24 24"><ci
 <symbol id="i-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
 </svg>''', 1)
 
+ICONS = ICONS.replace('<symbol id="i-arrow"', f'<defs><path id="fx-word" d="{WORD}"/></defs>\n<symbol id="i-arrow"', 1)
+
 def go_ic():
     return '<svg class="ic ic-go" aria-hidden="true"><use href="#i-arrow"/></svg>'
 
@@ -774,7 +774,7 @@ def app_mock(uid='am', white_label=False, cols4=False):
     """Interface do produto desenhada em HTML. 🖼️ troque por print real quando tiver."""
     brand = ('<span class="bx wl">SA</span>Sua Agência' if white_label else f'<span class="bx">{mark(uid, size=16)}</span>Full10X')
     url = 'app.suaagencia.com.br/pipeline' if white_label else 'app.grupofull10x.com/pipeline'
-    nav = [('crm', 'Pipeline', True, '34'), ('users', 'Leads', False, ''), ('pay', 'Cobranças', False, ''), ('chat', 'IA comercial', False, '3'), ('ops', 'IA operacional', False, ''), ('chart', 'Relatórios', False, '')]
+    nav = [('crm', 'Pipeline', True, '34'), ('users', 'Leads', False, ''), ('pay', 'Cobranças', False, ''), ('chat', 'IA (prévia)', False, '3'), ('ops', 'IA operacional', False, ''), ('chart', 'Relatórios', False, '')]
     side = ''.join(f'<span class="it{" on" if on else ""}">{ic(i)}{t}{f"<b>{b}</b>" if b else ""}</span>' for i, t, on, b in nav)
     kpis = [('Leads no mês', '312', '+18%'), ('Qualificados', '128', '+12%'), ('Taxa de fechamento', '31%', '+4 p.p.'), ('Recebido', 'R$ 48.200', '+9%')]
     k = ''.join(f'<div class="kpi"><span>{a}</span><b>{b}</b><i>{ic("chart")}{c} vs. set.</i></div>' for a, b, c in kpis)
@@ -805,7 +805,7 @@ ART = {
    <div style="--c:#ffffff40"><span><em>D+5</em>Aviso de suspensão</span><b>—</b></div></div></div>''',
  'chat': lambda: f'''<div class="art"><div class="chat">
    <div class="msg">Oi! Quanto custa a gestão de tráfego?<small>Lead · 23:41</small></div>
-   <div class="msg me">Já te passo! Antes: quanto vocês investem em anúncio por mês hoje?<small>IA comercial · 23:41</small></div>
+   <div class="msg me">Já te passo! Antes: quanto vocês investem em anúncio por mês hoje?<small>IA comercial (prévia) · 23:41</small></div>
    <div class="msg">Uns R$ 8 mil.</div>
    <span class="ok-chip">{ic("cal")}Call agendada · qui 14h</span></div></div>''',
  'ops': lambda: f'''<div class="art"><div class="kn"><div>
@@ -828,8 +828,9 @@ def bento(items, link_label='Ver demonstração', link_href='09-software-whitela
                 f'<a class="more" href="{link_href}">{link_label} {ic("arrow")}</a>{ART[key]()}</article>')
     return f'<div class="bento">{out}</div>'
 
-def strip(label='Funciona com o que sua agência já usa'):
-    items = [('pix', 'Pix'), ('pay', 'Boleto e cartão'), ('whats', 'WhatsApp'), ('cal', 'Calendly'), ('zap', 'Webhooks · n8n · Make')]
+def strip(label='Funciona com o que sua agência já usa', items=None):
+    # só integrações confirmadas na FONTE-DA-VERDADE (seção 3b/6); passe `items` para trocar
+    items = items or [('whats', 'WhatsApp'), ('pix', 'Pix e boleto (Asaas)'), ('chart', 'Meta Ads'), ('cal', 'Google Agenda'), ('zap', 'Webhooks · n8n')]
     return f'<div class="strip reveal"><span>{label}</span>' + ''.join(f'<b>{ic(i)}{t}</b>' for i, t in items) + '</div>'
 
 def cta_panel(uid, title, lead, ctas):
@@ -879,7 +880,11 @@ function track(ev,p,id){try{if(w.fbq){var o=id?{eventID:id}:undefined;STD[ev]?w.
 w.fxTrack=track;
 /* UTMs */
 var UTM=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','fbclid','gclid','ttclid'];
-var q=new URLSearchParams(location.search);UTM.forEach(function(k){var v=q.get(k);if(v)sset(k,v)});
+/* (a captura de UTM na URL já é feita pelo bloco RASTREIO; aqui só se lê) */
+var RM=!!(w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches),DRAFT=d.documentElement.classList.contains('draft');
+/* WhatsApp: vazio ou número de exemplo (5500000000000) = não configurado → nenhum link wa.me aparece */
+var WA=/^55\d{10,11}$/.test(C.WHATSAPP||'')&&!/^55(\d)\1{10,11}$/.test(C.WHATSAPP)&&!/^550{8,}/.test(C.WHATSAPP)?C.WHATSAPP:'';
+d.querySelectorAll('[data-wa]').forEach(function(a){if(!WA)a.hidden=true});
 function uid(){try{return crypto.randomUUID()}catch(e){return Date.now().toString(36)+Math.random().toString(36).slice(2)}}
 function cookie(n){var m=d.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
 /* ano */
@@ -895,26 +900,32 @@ if('IntersectionObserver' in w){
   if(mbar&&hb){d.body.classList.add('has-mbar');new IntersectionObserver(function(es){mbar.classList.toggle('show',!es[0].isIntersecting&&es[0].boundingClientRect.top<0)}).observe(hb)}
 }else{rv.forEach(function(el){el.classList.add('on')});if(mbar)mbar.classList.add('show')}
 /* VSL: CTA aparece depois de X segundos (data-delay). Conta só com a aba visível */
+/* vídeo: sem URL configurada o bloco some em produção (em rascunho mostra o aviso) e o formulário libera na hora */
+var hasVideo=false;
+d.querySelectorAll('.video[data-embed-key]').forEach(function(v){var u=C[v.dataset.embedKey];if(u){hasVideo=true;return}
+  if(DRAFT)return;var wrap=v.closest('.vsl-wrap')||v;wrap.hidden=true;var n=wrap.nextElementSibling;if(n&&n.classList.contains('vsl-note'))n.hidden=true;
+  d.querySelectorAll('.vsl-note').forEach(function(x){x.hidden=true})});
 var dl=d.querySelectorAll('.delayed[data-delay]');
-if(dl.length){var t0=0,last=Date.now(),need=+dl[0].dataset.delay||0;
+if(dl.length){var t0=0,last=Date.now(),need=hasVideo?(+dl[0].dataset.delay||0):0;
   if(sget('vsl_ok_'+C.PAGINA))need=0;
   var tm=setInterval(function(){var now=Date.now();if(!d.hidden)t0+=now-last;last=now;
     if(t0/1000>=need){dl.forEach(function(e){e.classList.remove('wait')});sset('vsl_ok_'+C.PAGINA,'1');track('VSLCtaLiberado',{segundos:need});clearInterval(tm)}},500);}
 /* vídeo: troca o placeholder pelo embed configurado */
 d.querySelectorAll('.video[data-embed-key]').forEach(function(v){var u=C[v.dataset.embedKey];if(!u)return;
-  v.innerHTML='<iframe src="'+u+'" title="Vídeo" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>'});
+  v.innerHTML='<iframe src="'+u+'" title="Vídeo" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe>'});
 /* backredirect: ao voltar no navegador, leva para a oferta de saída */
-if(C.BACK_URL){try{var bk=C.BACK_URL+(C.BACK_URL.indexOf('?')>-1?'&':'?')+'origem='+encodeURIComponent(C.PAGINA||'');
+/* arma uma única vez por sessão e nunca quando a pessoa chegou vindo da própria página de saída: o 2º "voltar" sai de verdade */
+if(C.BACK_URL&&!sget('fx_back')&&!(d.referrer&&d.referrer.indexOf(C.BACK_URL.replace(/\/$/,''))>-1)){try{var bk=C.BACK_URL+(C.BACK_URL.indexOf('?')>-1?'&':'?')+'origem='+encodeURIComponent(C.PAGINA||'');
   history.pushState({fx:1},'',location.href);
-  w.addEventListener('popstate',function(){track('BackRedirect',{destino:C.BACK_URL});location.replace(bk)});}catch(e){}}
+  w.addEventListener('popstate',function(){sset('fx_back','1');track('BackRedirect',{destino:C.BACK_URL});location.replace(bk)});}catch(e){}}
 /* blog: filtro por categoria */
 var chips=d.querySelectorAll('.chip[data-f]');
 chips.forEach(function(c){c.addEventListener('click',function(){var f=c.dataset.f;
   chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});
   d.querySelectorAll('.post[data-cat]').forEach(function(p){p.hidden=!(f==='todos'||p.dataset.cat===f)})})});
 /* rolar até o formulário */
-d.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(e){var t=d.querySelector(b.dataset.go);if(!t)return;e.preventDefault();
-  t.scrollIntoView({behavior:'smooth',block:'start'});var f=t.querySelector('input:not([type=hidden]),select,textarea');if(f)setTimeout(function(){f.focus({preventScroll:true})},500);track('CliqueCTA',{origem:b.dataset.pos||''})})});
+d.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(e){var g=b.dataset.go||'';if(g.charAt(0)!=='#')return;var t=d.querySelector(g);if(!t)return;e.preventDefault();
+  t.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});var f=t.querySelector('input:not([type=hidden]),select,textarea');if(f)setTimeout(function(){f.focus({preventScroll:true})},500);track('CliqueCTA',{origem:b.dataset.pos||''})})});
 
 /* ───── FORMULÁRIO (multi-etapa, qualificação, webhook, roteamento) ───── */
 d.querySelectorAll('form.fx-form').forEach(function(form){
@@ -930,19 +941,20 @@ d.querySelectorAll('form.fx-form').forEach(function(form){
   function valid(n){var f=steps[n-1];err(n,'');var bad=null;
     f.querySelectorAll('input[required],textarea[required],select[required]').forEach(function(i){if(bad||i.type==='radio')return;var v=i.value.trim(),ok=v.length>=(+i.dataset.min||2);
       if(i.type==='email')ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
-      if(i.type==='tel'){var g=v.replace(/\D/g,'');ok=g.length>=10&&g.length<=13}
+      if(i.type==='tel'){var g=v.replace(/\D/g,'');ok=/^[1-9]\d(9\d{8}|[2-5]\d{7})$/.test(g)}
       i.setAttribute('aria-invalid',!ok);if(!ok)bad=i});
     if(bad){err(n,bad.dataset.err||'Confira este campo.');bad.focus();return false}
     var groups={};f.querySelectorAll('input[type=radio][required]').forEach(function(r){groups[r.name]=1});
     for(var g in groups){if(!f.querySelector('input[name="'+g+'"]:checked')){err(n,'Escolha uma opção.');var a=f.querySelector('input[name="'+g+'"]');if(a)a.focus();return false}}
     return true}
   function score(){var s=0;form.querySelectorAll('input:checked').forEach(function(r){s+=+r.dataset.s||0});return s}
-  function payload(status){var o=vals();delete o.empresa_site;if(w.fxAttr){var fa=w.fxAttr();Object.keys(fa).forEach(function(k){if(!o[k])o[k]=fa[k]})}UTM.forEach(function(k){if(!o[k])o[k]=sget(k)||''});
+  function payload(status){var o=vals();delete o.empresa_site;Object.keys(o).forEach(function(k){o[k]=o[k].slice(0,500)});if(w.fxAttr){var fa=w.fxAttr();Object.keys(fa).forEach(function(k){if(!o[k])o[k]=fa[k]})}UTM.forEach(function(k){if(!o[k])o[k]=sget(k)||''});
     var fbclid=o.fbclid;o.fbp=cookie('_fbp');o.fbc=cookie('_fbc')||(fbclid?'fb.1.'+Date.now()+'.'+fbclid:'');
     o.status=status;o.lead_id=pid;o.pagina=C.PAGINA;o.funil=form.dataset.funil||C.PAGINA;o.url=location.href.split('#')[0];o.data=new Date().toISOString();return o}
   function post(o){if(!C.WEBHOOK_URL)return Promise.resolve('demo');
-    return fetch(C.WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(o),keepalive:true})}
-  function parcial(){if(sentParcial)return;sentParcial=true;var o=payload('parcial');if(o.empresa_site)return;post(o).catch(function(){});track('InicioCadastro',{funil:o.funil})}
+    var ac=w.AbortController?new AbortController():null,tm=ac&&setTimeout(function(){ac.abort()},10000);
+    return fetch(C.WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(o),keepalive:true,signal:ac&&ac.signal}).finally(function(){clearTimeout(tm)})}
+  function parcial(){if(sentParcial)return;sentParcial=true;if(vals().empresa_site)return;var o=payload('parcial');post(o).catch(function(){});track('InicioCadastro',{funil:o.funil})}
   function go(){if(!valid(cur))return;
     if(steps[cur-1].querySelector('input[type=tel],input[type=email]'))parcial();
     if(cur<N){track('EtapaFormulario',{etapa:cur,funil:form.dataset.funil});show(cur+1)}else submit()}
@@ -961,8 +973,10 @@ d.querySelectorAll('form.fx-form').forEach(function(form){
     if(box){box.hidden=false;box.focus&&box.setAttribute('tabindex','-1');box.focus()}
     var cal=box&&box.querySelector('[data-calendly]');if(cal)calendly(cal,o);
     var rd=box&&box.dataset.redirect;if(rd&&C[rd]){setTimeout(function(){location.href=C[rd]},C.REDIRECT_DELAY||1800)}
-    var wa=box&&box.querySelector('[data-wa]');if(wa&&C.WHATSAPP)wa.href='https://wa.me/'+C.WHATSAPP+'?text='+encodeURIComponent('Olá! Acabei de preencher o formulário ('+(o.funil||'')+'). Meu nome é '+(o.nome||'')+'.');
-    d.querySelectorAll('[data-dl]').forEach(function(a){if(C[a.dataset.dl])a.href=C[a.dataset.dl]})}
+    var wa=box&&box.querySelector('[data-wa]');if(wa){if(WA){wa.hidden=false;wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Olá! Acabei de preencher o formulário ('+(o.funil||'')+'). Meu nome é '+(o.nome||'')+'.')}else wa.hidden=true}
+    d.querySelectorAll('[data-dl]').forEach(function(a){if(C[a.dataset.dl])a.href=C[a.dataset.dl];else a.hidden=true})}
+  function retry(){enviado=false;form.querySelectorAll('[data-done]').forEach(function(b){b.hidden=true});if(navf)navf.hidden=false;var pv=form.querySelector('.privacy');if(pv)pv.hidden=false;show(N);if(next)next.focus()}
+  form.querySelectorAll('[data-retry]').forEach(function(b){b.addEventListener('click',retry)});
   if(next)next.addEventListener('click',go);
   if(back)back.addEventListener('click',function(){if(cur>1)show(cur-1)});
   form.addEventListener('submit',function(e){e.preventDefault();go()});
@@ -976,15 +990,15 @@ d.querySelectorAll('form.fx-form').forEach(function(form){
 });
 /* ───── CALENDLY: embute com nome/e-mail preenchidos e rastreia o agendamento ───── */
 function calendly(el,o){var url=C.CALENDLY_URL;
-  if(!url){el.innerHTML='<div class="cal-ph">Agenda de demonstração. Configure CALENDLY_URL no topo do arquivo.</div>';return}
+  if(!url){/* sem agenda configurada: confirmação em texto (sem evento Schedule); em rascunho avisa o que falta */
+    el.innerHTML='<p class="cal-txt">Recebemos seus dados. O time fala com você em até 24 horas úteis.</p>'+(DRAFT?'<div class="cal-ph">Rascunho: configure CALENDLY_URL para mostrar a agenda aqui.</div>':'');return}
   var u=url+(url.indexOf('?')>-1?'&':'?')+'hide_gdpr_banner=1&name='+encodeURIComponent(o.nome||'')+'&email='+encodeURIComponent(o.email||'')+
     '&a1='+encodeURIComponent(o.whatsapp||'')+'&utm_source='+encodeURIComponent(o.utm_source||'')+'&utm_campaign='+encodeURIComponent(o.utm_campaign||'');
   el.classList.add('cal');el.innerHTML='<div class="calendly-inline-widget" data-url="'+u+'" style="min-width:280px;height:680px"></div>';
   var s=d.createElement('script');s.src='https://assets.calendly.com/assets/external/widget.js';s.async=true;d.body.appendChild(s);}
 w.addEventListener('message',function(e){if(e.origin==='https://calendly.com'&&e.data&&e.data.event==='calendly.event_scheduled'){track('Schedule',{funil:C.PAGINA});
   if(C.POS_AGENDAMENTO_URL)setTimeout(function(){location.href=C.POS_AGENDAMENTO_URL},1500)}});
-/* cabeçalho ganha borda ao rolar */
-var tp=d.querySelector('.top');if(tp){var sc=function(){tp.classList.toggle('scrolled',w.scrollY>8)};sc();w.addEventListener('scroll',sc,{passive:true})}
+/* (cabeçalho ao rolar: cuidado pela camada de movimento, item 2 — um único listener) */
 /* holofote: luz segue o cursor nos cartões */
 if(w.matchMedia&&w.matchMedia('(hover:hover)').matches)d.querySelectorAll('.spot').forEach(function(el){el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')})});
 })();
@@ -993,7 +1007,7 @@ if(w.matchMedia&&w.matchMedia('(hover:hover)').matches)d.querySelectorAll('.spot
 (function(d,w){'use strict';
 var RM=!!(w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches);
 /* 1. Títulos palavra por palavra: divide, numera (--i) e revela ao entrar na tela */
-var heads=[].filter.call(d.querySelectorAll('h1,h2'),function(h){return !h.closest('dialog,.form-card,.done,.card-h,.app,[data-nosplit]')&&!h.querySelector('.w')});
+var heads=[].filter.call(d.querySelectorAll('h1,h2'),function(h){return !h.closest('.form-card,.done,.app,[data-nosplit]')&&!h.querySelector('.w')});
 heads.forEach(function(h){var i=0;h.setAttribute('aria-label',h.textContent.replace(/\s+/g,' ').trim());
   (function walk(n){[].slice.call(n.childNodes).forEach(function(c){
     if(c.nodeType===3){var f=d.createDocumentFragment();c.data.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){f.appendChild(d.createTextNode(' '));return}
@@ -1013,14 +1027,14 @@ var tk=0;function onsc(){if(tk)return;tk=requestAnimationFrame(function(){tk=0;s
 w.addEventListener('scroll',onsc,{passive:true});w.addEventListener('load',sweep);
 
 /* 2. Cabeçalho de vidro que encolhe ao rolar */
-var hd=d.querySelector('.top,header.nav,body>.bar');
+var hd=d.querySelector('.top');
 if(hd){var sc=function(){hd.classList.toggle('scrolled',w.scrollY>12)};sc();w.addEventListener('scroll',sc,{passive:true})}
 
 /* 3. Holofote 3D: brilho segue o mouse + inclinação leve. Só com mouse e movimento permitido */
 if(!RM&&w.matchMedia&&w.matchMedia('(hover:hover) and (pointer:fine)').matches){
-  var BIG='.app,.screen,.offer,.ticket,.cta-panel';
-  d.querySelectorAll('.tile,.card:not(.form-card),.plan,.post,.quote,.side-shot .app,.shot .app,.out,.agenda li,.missing,.screen,.fit>div,.compare>div,.ticket,.offer').forEach(function(el){
-    if(el.closest('.form-card,dialog')||(el.classList.contains('card')&&el.closest('.screen')))return;
+  var BIG='.app,.cta-panel';
+  d.querySelectorAll('.tile,.card:not(.form-card),.plan,.post,.quote,.side-shot .app,.shot .app,.compare>div').forEach(function(el){
+    if(el.closest('.form-card'))return;
     var g=d.createElement('span');g.className='glare';g.setAttribute('aria-hidden','true');el.appendChild(g);el.classList.add('has-glare');
     if(getComputedStyle(el).position==='static')el.style.position='relative';
     var max=el.matches(BIG)?2.5:5,base='',raf=0;
@@ -1034,7 +1048,7 @@ if(!RM&&w.matchMedia&&w.matchMedia('(hover:hover) and (pointer:fine)').matches){
 /* 4. Formulário: campo inválido treme */
 function shake(){setTimeout(function(){d.querySelectorAll('[aria-invalid="true"],.err:not(:empty)').forEach(function(el){
   if(el.offsetParent===null)return;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake')})},40)}
-d.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('[data-next],#next'))shake()},true);
+d.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('[data-next]'))shake()},true);
 d.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.closest&&e.target.closest('form'))shake()},true);
 d.addEventListener('animationend',function(e){if(e.animationName==='fxshake')e.target.classList.remove('shake')});
 })(document,window);
@@ -1049,21 +1063,23 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 if(window.CONFIG&&CONFIG.PIXEL_ID){fbq('init',CONFIG.PIXEL_ID);fbq('track','PageView');}</script>''' if pixel else '')
     return f'''<meta charset="UTF-8">
-<script>{TRACK}</script>
+<script>{TRACK_MIN}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
-<!-- 🖼️ MÍDIA: imagem 1200x630 da prévia no WhatsApp (use um dos fundos de produto) -->
-<meta property="og:image" content="">
+<meta property="og:url" content="{canonical}">
+<meta property="og:locale" content="pt_BR">
+<!-- 🖼️ MÍDIA: quando existir a imagem 1200x630 (static/og.png), adicione <meta property="og:image" content="https://www.fullxmarketing.com/og.png"> -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com https://connect.facebook.net; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.facebook.com https://connect.facebook.net; frame-src https://calendly.com https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://*.pandavideo.com.br https://*.vturb.com.br https://*.converteai.net; form-action 'self'; base-uri 'self'; object-src 'none'">
 <meta name="theme-color" content="#02040a">
 <!-- 🔗 LINK: endereço final desta página -->
 <link rel="canonical" href="{canonical}">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 {px}'''
 
 def config(pagina, extra=''):
@@ -1077,9 +1093,9 @@ def config(pagina, extra=''):
 window.CONFIG={{
   PAGINA:'{pagina}',
   PIXEL_ID:'1127997753074983',
-  WEBHOOK_URL:'',
-  WHATSAPP:'5500000000000',
-  BACK_URL:''{extra}
+  WEBHOOK_URL:'https://script.google.com/macros/s/AKfycbwVAbcJL5BcocQ5-FYh7yqGZz22purH7bnaBhqhEWzSq9PZoW0TxZaLPlmfJjFsOgCG/exec',
+  WHATSAPP:'',
+  BACK_URL:'{"" if pagina == "backredirect" else "/espera/"}'{extra}
 }};
 </script>'''
 
@@ -1102,23 +1118,32 @@ def footer(uid, full=True):
         return (f'<footer class="mini-foot"><div class="wrap">{logo(uid, h=22)}<span>© <span data-ano>2026</span> Full10X. Todos os direitos reservados.</span>'
                 '<span><a href="#" class="small">Política de privacidade</a></span></div></footer>')
     return f'''<footer class="foot"><div class="wrap">
-<div class="foot-g">
+<nav class="foot-g" aria-label="Rodapé">
   <div>{logo(uid, h=26)}<p class="small" style="margin-top:14px;max-width:34ch">Sistemas e educação para agências que querem previsibilidade de venda e operação.</p></div>
-  <div><h4>Softwares</h4><ul><li><a href="01-institucional.html#softwares">CRM</a></li><li><a href="01-institucional.html#softwares">Gateway de pagamento</a></li><li><a href="01-institucional.html#softwares">IA operacional</a></li><li><a href="01-institucional.html#softwares">IA comercial</a></li><li><a href="09-software-whitelabel.html">White label</a></li></ul></div>
+  <div><h4>Softwares</h4><ul><li><a href="01-institucional.html#softwares">CRM</a></li><li><a href="01-institucional.html#softwares">Sistema de cobrança</a></li><li><a href="01-institucional.html#softwares">IA operacional</a></li><li><a href="09-software-whitelabel.html">White label</a></li></ul></div>
   <div><h4>Conteúdos</h4><ul><li><a href="01b-blog.html">Blog</a></li><li><a href="06-playbook-ebook.html">Playbook (ebook)</a></li><li><a href="07-playbook-curso.html">Curso gratuito</a></li></ul></div>
-  <div><h4>Empresa</h4><ul><li><a href="04-vsl-form-calendly.html">Mentoria</a></li><li><a href="05-aplicacao.html">Aplicação</a></li><!-- 🔗 LINK: Instagram --><li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
-</div>
-<div class="legal"><span>© <span data-ano>2026</span> Full10X · <span class="todo">[RAZÃO SOCIAL · CNPJ]</span></span><span><a href="#">Política de privacidade</a> · <a href="#">Termos de uso</a></span></div>
+  <div><h4>Empresa</h4><ul><li><a href="04-vsl-form-calendly.html">Mentoria</a></li><li><a href="05-aplicacao.html">Aplicação</a></li><!-- 🔗 LINK: Instagram --><li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li></ul></div>
+</nav>
+<div class="legal"><span>© <span data-ano>2026</span> Full10X. Todos os direitos reservados.</span><span><a href="#">Política de privacidade</a> · <a href="#">Termos de uso</a></span></div>
 </div>{logo(uid+'g', h=150).replace('class="logo"','class="logo giant"')}</footer>'''
 
 def faq(items):
     return ''.join(f'<details><summary>{q}{ic("plus")}</summary><p>{a}</p></details>' for q, a in items)
 
 def privacy():
-    return f'<p class="privacy">{ic("lock")}Seus dados ficam só com a Full10X. Sem spam.</p>'
+    # 🔗 LINK: quando existir a página de privacidade, troque o href="#" pela URL real (pendência registrada em SISTEMA.md)
+    return f'<p class="privacy">{ic("lock")}<span>Usamos seus dados só para responder a este pedido (LGPD). Sem spam. <a href="#" rel="nofollow">Política de privacidade</a></span></p>'
 
 def hp():
-    return '<div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="empresa_site" tabindex="-1" autocomplete="off"></label></div>'
+    return '<div class="hp" aria-hidden="true"><label>Não preencha<input type="text" name="empresa_site" tabindex="-1" autocomplete="off"></label></div><noscript><p class="err">Ative o JavaScript para enviar este formulário.</p></noscript>'
+
+def _min(src, css=False):
+    """Tira comentários de bloco que ocupam linha(s) inteira(s) e a indentação; não mexe em strings nem em regex."""
+    src = re.sub(r'(?m)^[ \t]*/\*.*?\*/[ \t]*\n?', '', src, flags=re.S)
+    if css: src = re.sub(r'/\*[^*]*\*+(?:[^/*][^*]*\*+)*/', '', src)   # CSS não tem strings com /*; seguro
+    return re.sub(r'(?m)^[ \t]+', '', src)
+
+CSS_MIN, TRACK_MIN, JS_MIN = _min(CSS, css=True), _min(TRACK), _min(JS)
 
 def page(title, desc, canonical, pagina, body, extra_cfg='', pixel=True):
     return f'''<!DOCTYPE html>
@@ -1136,7 +1161,7 @@ def page(title, desc, canonical, pagina, body, extra_cfg='', pixel=True):
 <head>
 {config(pagina, extra_cfg)}
 {head(title, desc, canonical, pixel)}
-<style>{CSS}</style>
+<style>{CSS_MIN}</style>
 <script>(function(d){{var h=d.documentElement;h.classList.add('js');if(location.protocol==='file:'||/^(localhost|127\\.0\\.0\\.1)$/.test(location.hostname))h.classList.add('draft')}})(document);</script>
 </head>
 <body>
@@ -1145,6 +1170,6 @@ def page(title, desc, canonical, pagina, body, extra_cfg='', pixel=True):
 {ICONS}
 {draft_bar()}
 {body}
-<script>{JS}</script>
+<script>{JS_MIN}</script>
 </body>
 </html>'''
