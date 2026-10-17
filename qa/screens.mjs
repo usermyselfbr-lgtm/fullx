@@ -36,6 +36,7 @@ for (const slug of slugs) {
     r.todo = info.todo; r.placeholders = info.ph;
     if (w === 390) for (const l of info.links) { const f = path.join(DIST, l, 'index.html'); if (!fs.existsSync(f)) r.brokenLinks.push(l); }
     if (w === 390 || w === 1440) await page.screenshot({ path: path.join(out, `${slug.replace(/\//g, '__')}-${w}.png`), fullPage: true });
+    if (w === 390) await page.screenshot({ path: path.join(out, `${slug.replace(/\//g, '__')}-390-dobra.png`), fullPage: false });
     if (w === 390) r.lcp = await page.evaluate(() => new Promise(res => { let v = null; new PerformanceObserver(l => { for (const e of l.getEntries()) v = Math.round(e.startTime); }).observe({ type: 'largest-contentful-paint', buffered: true }); setTimeout(() => res(v), 300); }));
     await ctx.close();
   }
